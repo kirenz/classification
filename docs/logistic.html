@@ -227,6 +227,33 @@
   <a class="reference internal nav-link" href="#id1">
    Logistic regression
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model">
+     Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confusion-matrix">
+     Confusion matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-report">
+     Classification report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-threshold">
+     Change threshold
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Classification report
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -344,6 +371,8 @@
 </div>
 <div class="section" id="id1">
 <h2>Logistic regression<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.linear_model</span> <span class="k">as</span> <span class="nn">skl_lm</span>
@@ -367,6 +396,9 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="confusion-matrix">
+<h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
@@ -382,9 +414,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic_8_0.png" src="../_images/logistic_8_0.png" />
+<img alt="../_images/logistic_10_0.png" src="../_images/logistic_10_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="classification-report">
+<h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -406,6 +441,9 @@ weighted avg       0.96      0.97      0.96      3000
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="change-threshold">
+<h3>Change threshold<a class="headerlink" href="#change-threshold" title="Permalink to this headline">¶</a></h3>
 <p>Use specific threshold</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -422,9 +460,12 @@ weighted avg       0.96      0.97      0.96      3000
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic_11_0.png" src="../_images/logistic_11_0.png" />
+<img alt="../_images/logistic_15_0.png" src="../_images/logistic_15_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="id2">
+<h3>Classification report<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]))</span>
@@ -441,6 +482,7 @@ weighted avg       0.96      0.97      0.96      3000
    macro avg       0.64      0.69      0.66      3000
 weighted avg       0.96      0.95      0.96      3000
 </pre></div>
+</div>
 </div>
 </div>
 </div>

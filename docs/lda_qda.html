@@ -227,11 +227,50 @@
   <a class="reference internal nav-link" href="#linear-discriminant-analysis">
    Linear discriminant analysis
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model">
+     Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confusion-matrix">
+     Confusion matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-report">
+     Classification report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-threshold">
+     Change threshold
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quadratic-discriminant-analysis">
    Quadratic Discriminant Analysis
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Confusion matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Classification report
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -355,6 +394,8 @@
 </div>
 <div class="section" id="linear-discriminant-analysis">
 <h2>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="kn">import</span> <span class="n">LinearDiscriminantAnalysis</span>
@@ -377,6 +418,9 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="confusion-matrix">
+<h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
@@ -392,7 +436,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lda_qda_8_0.png" src="../_images/lda_qda_8_0.png" />
+<img alt="../_images/lda_qda_10_0.png" src="../_images/lda_qda_10_0.png" />
 </div>
 </div>
 <p>Confusion matrix as pandas table:</p>
@@ -449,6 +493,9 @@
 </table>
 </div></div></div>
 </div>
+</div>
+<div class="section" id="classification-report">
+<h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -470,6 +517,9 @@ weighted avg       0.97      0.98      0.97      3000
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="change-threshold">
+<h3>Change threshold<a class="headerlink" href="#change-threshold" title="Permalink to this headline">¶</a></h3>
 <p>Use specific threshold</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -556,8 +606,11 @@ weighted avg       0.97      0.96      0.96      3000
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="quadratic-discriminant-analysis">
 <h2>Quadratic Discriminant Analysis<a class="headerlink" href="#quadratic-discriminant-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="kn">import</span> <span class="n">QuadraticDiscriminantAnalysis</span>
@@ -568,6 +621,9 @@ weighted avg       0.97      0.96      0.96      3000
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id2">
+<h3>Confusion matrix<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
@@ -583,9 +639,12 @@ weighted avg       0.97      0.96      0.96      3000
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lda_qda_18_0.png" src="../_images/lda_qda_18_0.png" />
+<img alt="../_images/lda_qda_24_0.png" src="../_images/lda_qda_24_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="id3">
+<h3>Classification report<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -604,6 +663,7 @@ weighted avg       0.97      0.96      0.96      3000
    macro avg      0.852     0.657     0.715      3000
 weighted avg      0.971     0.976     0.971      3000
 </pre></div>
+</div>
 </div>
 </div>
 </div>

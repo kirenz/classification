@@ -226,6 +226,23 @@
   <a class="reference internal nav-link" href="#knn">
    KNN
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model">
+     Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confusion-matrix">
+     Confusion matrix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-report">
+     Classification report
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -343,6 +360,8 @@
 </div>
 <div class="section" id="knn">
 <h2>KNN<a class="headerlink" href="#knn" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
@@ -353,6 +372,9 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="confusion-matrix">
+<h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
@@ -368,9 +390,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/knn_7_0.png" src="../_images/knn_7_0.png" />
+<img alt="../_images/knn_9_0.png" src="../_images/knn_9_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="classification-report">
+<h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -389,6 +414,7 @@
    macro avg      0.773     0.586     0.627      3000
 weighted avg      0.963     0.971     0.963      3000
 </pre></div>
+</div>
 </div>
 </div>
 </div>
