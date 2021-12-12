@@ -1,6 +1,10 @@
 format: jb-book
 root: docs/intro.md
 parts:
-  - caption: Basics
+  - caption: Algorithms
     chapters:
-    - file: docs/basics.ipynb
+    - file: docs/logistic.ipynb
+    - file: docs/lda_qda.ipynb
+    - file: docs/knn.ipynb
+
+
