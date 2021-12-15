@@ -6,5 +6,8 @@ parts:
     - file: docs/logistic.ipynb
     - file: docs/lda_qda.ipynb
     - file: docs/knn.ipynb
+  - caption: Case Study
+    chapters:
+    - file: docs/logistic-whr.ipynb
 
 
