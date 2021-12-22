@@ -9,5 +9,6 @@ parts:
   - caption: Case Study
     chapters:
     - file: docs/logistic-whr.ipynb
+    - file: docs/logistic-online.ipynb
 
 

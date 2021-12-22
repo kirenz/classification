@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logistic regression &#8212; Introduction to Classification</title>
+    <title>World happiness report &#8212; Introduction to Classification</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,6 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Online ads" href="logistic-online.html" />
     <link rel="prev" title="K Nearest Neighbors" href="knn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -125,7 +126,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Logistic regression
+   World happiness report
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logistic-online.html">
+   Online ads
   </a>
  </li>
 </ul>
@@ -232,11 +238,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#world-happiness-report">
-   World happiness report
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-description">
    Task Description
   </a>
@@ -324,16 +325,13 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="logistic-regression">
-<h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="world-happiness-report">
-<h2>World happiness report<a class="headerlink" href="#world-happiness-report" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="world-happiness-report">
+<h1>World happiness report<a class="headerlink" href="#world-happiness-report" title="Permalink to this headline">¶</a></h1>
 <p>The World Happiness Report ranks 156 countries by their happiness levels (<code class="docutils literal notranslate"><span class="pre">Happiness.Score</span></code>). The rankings come from the Gallup World Poll and are based on answers to the main life evaluation question asked in the poll. This is called the Cantril ladder: it asks respondents to think of a ladder, with the best possible life for them being a 10, and the worst possible life being a 0. They are then asked to rate their own current lives on that 0 to 10 scale. The rankings are from nationally representative samples, for the years 2013-2015. They are based entirely on the survey scores, using the Gallup weights to make the estimates representative.</p>
 <p>The other variables in the dataset show the estimated extent to which each of the factors contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the factors (for more information about the data, visit this <a class="reference external" href="https://s3.amazonaws.com/happiness-report/2016/FAQ_2016.pdf">FAQ-site</a> or the <a class="reference external" href="http://worldhappiness.report/ed/2016/">World Happiness Report-site</a>).</p>
 <p>Data Source:</p>
 <p><em>Helliwell, J., Layard, R., &amp; Sachs, J. (2016). World Happiness Report 2016, Update (Vol. I).
 New York: Sustainable Development Solutions Network.</em></p>
-</div>
 <div class="section" id="task-description">
 <h2>Task Description<a class="headerlink" href="#task-description" title="Permalink to this headline">¶</a></h2>
 <p>In this assignment, we analyse the relationship between the country specific happiness and some predictor variables. In particular, we want to classify which countries are likely to be “happy”.</p>
@@ -999,7 +997,7 @@ memory usage: 7.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-whr_28_0.png" src="../_images/logistic-whr_28_0.png" />
+<img alt="../_images/logistic-whr_27_0.png" src="../_images/logistic-whr_27_0.png" />
 </div>
 </div>
 </div>
@@ -1021,7 +1019,7 @@ memory usage: 7.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-whr_30_0.png" src="../_images/logistic-whr_30_0.png" />
+<img alt="../_images/logistic-whr_29_0.png" src="../_images/logistic-whr_29_0.png" />
 </div>
 </div>
 </div>
@@ -2000,6 +1998,15 @@ F1 Score:  0.7812
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="logistic-online.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Online ads</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
