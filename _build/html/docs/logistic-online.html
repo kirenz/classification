@@ -255,11 +255,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#predictions">
-   Predictions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#thresholds">
    Thresholds
   </a>
@@ -960,26 +955,6 @@ weighted avg       0.79      0.78      0.78       120
 <p>The unweighted recall of our model is _____</p>
 <p>The unweighted precision of our model is _____</p>
 </div>
-<div class="section" id="predictions">
-<h2>Predictions<a class="headerlink" href="#predictions" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">predict()</span></code> function can be used to predict the probability that a customer will buy, given values of the predictors. The <code class="docutils literal notranslate"><span class="pre">type=&quot;response&quot;</span></code> option tells R to output probabilities of the form P(Y = 1|X).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glm_probs</span> <span class="o">&lt;-</span><span class="n">predict</span><span class="p">(</span><span class="n">glm_fits</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span><span class="s2">&quot;response&quot;</span><span class="p">)</span>
-<span class="nb">round</span><span class="p">(</span><span class="n">glm_probs</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can use the <code class="docutils literal notranslate"><span class="pre">contrasts()</span></code> function to check wether the above values actually correspond to the probability of a purchase. Below the <code class="docutils literal notranslate"><span class="pre">contrasts()</span></code> function indicates that R has created a dummy variable with a 1 for purchase.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>contrasts(purchase$Purchased)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="thresholds">
 <h2>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this headline">¶</a></h2>
 <p>Logistic regression returns a probability. You can use the returned probability “as is” (for example, the probability that the user will buy the product is 0.8) or convert the returned probability to a binary value (for example, this user will buy the product, therefore we label him as “Yes”).</p>
@@ -1010,7 +985,7 @@ weighted avg       0.79      0.78      0.78       120
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_40_0.png" src="../_images/logistic-online_40_0.png" />
+<img alt="../_images/logistic-online_36_0.png" src="../_images/logistic-online_36_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
            0       0.84      0.79      0.81        72
@@ -1041,7 +1016,7 @@ weighted avg       0.79      0.78      0.78       120
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_42_0.png" src="../_images/logistic-online_42_0.png" />
+<img alt="../_images/logistic-online_38_0.png" src="../_images/logistic-online_38_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
            0       0.77      0.90      0.83        72
@@ -1072,7 +1047,7 @@ weighted avg       0.79      0.78      0.78       120
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_44_0.png" src="../_images/logistic-online_44_0.png" />
+<img alt="../_images/logistic-online_40_0.png" src="../_images/logistic-online_40_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
            0       0.66      0.96      0.78        72

@@ -77,7 +77,7 @@ train_dataset.groupby(by=['Purchased']).describe().T
 # 
 # Visualization of differences:
 
-# In[43]:
+# In[9]:
 
 
 import seaborn as sns
@@ -87,7 +87,7 @@ sns.pairplot(hue='Purchased', kind="reg", diag_kind="kde", data=train_dataset);
 
 # Inspect (linear) relationships between variables with correlation (pearson's correlation coefficient)
 
-# In[41]:
+# In[10]:
 
 
 import numpy as np
@@ -103,7 +103,7 @@ cmap = sns.diverging_palette(220, 10, as_cmap=True)
 sns.heatmap(corr, mask=mask, cmap=cmap, annot=True, square=True, annot_kws={"size": 12});
 
 
-# In[9]:
+# In[11]:
 
 
 sns.kdeplot(hue="Purchased", x='Age', data=train_dataset);
@@ -111,7 +111,7 @@ sns.kdeplot(hue="Purchased", x='Age', data=train_dataset);
 
 # Purchasers seem to be _________ than non-purchaser.
 
-# In[10]:
+# In[12]:
 
 
 sns.boxplot(x="male", y="Age", hue="Purchased", data=train_dataset);
@@ -119,7 +119,7 @@ sns.boxplot(x="male", y="Age", hue="Purchased", data=train_dataset);
 
 # There are __________ differences regarding gender.
 
-# In[11]:
+# In[13]:
 
 
 sns.kdeplot(hue="Purchased", x='EstimatedSalary', data=train_dataset); 
@@ -127,7 +127,7 @@ sns.kdeplot(hue="Purchased", x='EstimatedSalary', data=train_dataset);
 
 # Purchaser earn a ______________ estimated salary.
 
-# In[12]:
+# In[14]:
 
 
 sns.boxplot(x="male", y="EstimatedSalary", hue="Purchased", data=train_dataset);
@@ -141,7 +141,7 @@ sns.boxplot(x="male", y="EstimatedSalary", hue="Purchased", data=train_dataset);
 # 
 # We only use our most promising predictor variables `Age` and `EstimatedSalary` for our model.
 
-# In[30]:
+# In[15]:
 
 
 # only use meaningful predictors
@@ -151,7 +151,7 @@ X_train = X_train[features_model]
 X_test = X_test[features_model]
 
 
-# In[31]:
+# In[16]:
 
 
 import sklearn.linear_model as skl_lm
@@ -164,14 +164,14 @@ y_pred = clf.fit(X_train, y_train).predict(X_test)
 
 # ## Classification metrics
 
-# In[32]:
+# In[17]:
 
 
 # Return the mean accuracy on the given test data and labels:
 clf.score(X_test, y_test)
 
 
-# In[33]:
+# In[18]:
 
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -185,7 +185,7 @@ disp.plot()
 plt.show()
 
 
-# In[34]:
+# In[19]:
 
 
 from sklearn.metrics import classification_report
@@ -213,25 +213,6 @@ print(classification_report(y_test, y_pred, target_names=['No', 'Yes']))
 # 
 # The unweighted precision of our model is _____  
 
-# ## Predictions
-# 
-# The `predict()` function can be used to predict the probability that a customer will buy, given values of the predictors. The `type="response"` option tells R to output probabilities of the form P(Y = 1|X).
-
-# In[ ]:
-
-
-glm_probs <-predict(glm_fits, type ="response")
-round(glm_probs[1:10],2)
-
-
-# We can use the `contrasts()` function to check wether the above values actually correspond to the probability of a purchase. Below the `contrasts()` function indicates that R has created a dummy variable with a 1 for purchase.
-
-# In[ ]:
-
-
-contrasts(purchase$Purchased)
-
-
 # ## Thresholds
 # 
 # Logistic regression returns a probability. You can use the returned probability "as is" (for example, the probability that the user will buy the product is 0.8) or convert the returned probability to a binary value (for example, this user will buy the product, therefore we label him as "Yes").
@@ -242,7 +223,7 @@ contrasts(purchase$Purchased)
 # 
 # We use three different thresholds. Which threshold would you recommend?
 
-# In[ ]:
+# In[20]:
 
 
 pred_proba = clf.predict_proba(X_test)
@@ -250,7 +231,7 @@ pred_proba = clf.predict_proba(X_test)
 
 # ### Threshold  0.4
 
-# In[44]:
+# In[21]:
 
 
 df_ = pd.DataFrame({'y_test': y_test, 'y_pred': pred_proba[:,1] > .4})
@@ -266,7 +247,7 @@ print(classification_report(y_test, df_['y_pred']))
 
 # ### Threshold 0.5
 
-# In[45]:
+# In[22]:
 
 
 df_ = pd.DataFrame({'y_test': y_test, 'y_pred': pred_proba[:,1] > .5})
@@ -282,7 +263,7 @@ print(classification_report(y_test, df_['y_pred']))
 
 # ### Threshold 0.7
 
-# In[46]:
+# In[23]:
 
 
 df_ = pd.DataFrame({'y_test': y_test, 'y_pred': pred_proba[:,1] > .7})
