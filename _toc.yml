@@ -1,6 +1,9 @@
 format: jb-book
 root: docs/intro.md
 parts:
+  - caption: Data
+    chapters:
+    - file: docs/data-credit.ipynb
   - caption: Algorithms
     chapters:
     - file: docs/logistic.ipynb
