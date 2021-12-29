@@ -1,52 +1,45 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # SGDClassifier
+# # SGD Classifier
+# 
+# We use a classification model to predict which customers will default on their credit card debt. Our estimator implements regularized linear models with stochastic gradient descent (SGD) learning.
 
-# In[ ]:
-
-
-
-
+# ## Data
+# 
+# To learn more about the data and all of the data preparation steps, take a look at [this page](/docs/data-credit.ipynb). Here, we simply import a Python script which includes all of the necessary steps.
 
 # In[1]:
 
 
-import pandas as pd
+from data_prep_credit import * 
 
-df = pd.read_csv('https://raw.githubusercontent.com/kirenz/classification/main/_static/data/Default.csv')
 
-# Note: factorize() returns two objects: a label array and an array with the unique values.
-# We are only interested in the first object. 
-df['default2'] = df.default.factorize()[0]
-df['student2'] = df.student.factorize()[0]
-df.head(3)
-
+# ## Model
+# 
+# [SGD classifier documentation](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html).
 
 # In[2]:
 
 
-X = df[['balance', 'income', 'student2']]
-y = df.default2
-
-from sklearn.model_selection import train_test_split
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 1)
-
-
-# In[3]:
-
-
 from sklearn.linear_model import SGDClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
 
-# fit the model
-clf = SGDClassifier(loss="hinge", alpha=0.01, max_iter=200, fit_intercept=True)
+# We always scale the input. The most convenient way is to use a pipeline.
+clf = make_pipeline(StandardScaler(),
+                    SGDClassifier(loss="hinge", 
+                                  alpha=0.01, 
+                                  max_iter=200, 
+                                  fit_intercept=True,
+                                  tol=1e-3))
+
 clf.fit(X_train, y_train)
 
 y_pred = clf.fit(X_train, y_train).predict(X_test)
 
 
-# In[4]:
+# In[3]:
 
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -60,13 +53,7 @@ disp.plot()
 plt.show()
 
 
-# In[ ]:
-
-
-
-
-
-# In[5]:
+# In[4]:
 
 
 from sklearn.metrics import classification_report

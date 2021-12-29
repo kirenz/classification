@@ -7,11 +7,7 @@
 # 
 # ## Data
 # 
-# To learn more about the data preparation, take a look at this [A different page](/docs/data-credit.ipynb)
-# 
-# test{doc}`data preparation notebook </docs/data-credit.ipynb>`.
-# 
-# We use a simple Python script to perform the necessary data preparation:
+# To learn more about the data and all of the data preparation steps, take a look at [this page](/docs/data-credit.ipynb). Here, we simply import a Python script which includes all of the necessary steps.
 
 # In[1]:
 
@@ -19,9 +15,7 @@
 from data_prep_credit import * 
 
 
-# ## Logistic regression
-
-# ### Model
+# ## Model
 
 # In[2]:
 
@@ -91,5 +85,3 @@ plt.show()
 
 print(classification_report(y_test, df_['y_pred']))
 
-
-# *To learn more about the method, take a look at ["An Introduction to Statistical Learning"](https://www.statlearning.com/) by James et al. (2021).* 

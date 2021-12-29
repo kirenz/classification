@@ -7,11 +7,10 @@ parts:
   - caption: Algorithms
     chapters:
     - file: docs/logistic.ipynb
+    - file: docs/sgd.ipynb
     - file: docs/lda_qda.ipynb
     - file: docs/knn.ipynb
   - caption: Case Study
     chapters:
     - file: docs/logistic-whr.ipynb
     - file: docs/logistic-online.ipynb
-
-
