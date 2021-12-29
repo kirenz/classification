@@ -2,55 +2,28 @@
 # coding: utf-8
 
 # # Logistic Regression
-# 
-# This code tutorial is mainly based on Python code provided by [Jordi Warmenhoven](https://github.com/JWarmenhoven/ISLR-python). To learn more about the method, take a look at ["An Introduction to Statistical Learning"](https://www.statlearning.com/) by James et al. (2021). 
 
+# We use a classification model to predict which customers will default on their credit card debt. 
+# 
 # ## Data
 # 
-# A data frame with 10000 observations on the following 4 variables:
+# To learn more about the data preparation, take a look at this [A different page](/docs/data-credit.ipynb)
 # 
-# - default: A categorical variable with levels No and Yes indicating whether the customer defaulted on their debt
+# test{doc}`data preparation notebook </docs/data-credit.ipynb>`.
 # 
-# - student: A categorical variable with levels No and Yes indicating whether the customer is a student
-# 
-# - balance: The average balance that the customer has remaining on their credit card after making their monthly payment
-# 
-# - income: Income of customer
+# We use a simple Python script to perform the necessary data preparation:
 
 # In[1]:
 
 
-import pandas as pd
-
-df = pd.read_csv('https://raw.githubusercontent.com/kirenz/classification/main/_static/data/Default.csv')
-
-# Note: factorize() returns two objects: a label array and an array with the unique values.
-# We are only interested in the first object. 
-df['default2'] = df.default.factorize()[0]
-df['student2'] = df.student.factorize()[0]
-df.head(3)
-
-
-# In[2]:
-
-
-X = df[['balance', 'income', 'student2']]
-y = df.default2
-
-
-# In[3]:
-
-
-from sklearn.model_selection import train_test_split
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 1)
+from data_prep_credit import * 
 
 
 # ## Logistic regression
 
 # ### Model
 
-# In[4]:
+# In[2]:
 
 
 import sklearn.linear_model as skl_lm
@@ -59,7 +32,7 @@ clf = skl_lm.LogisticRegression()
 y_pred = clf.fit(X_train, y_train).predict(X_test)
 
 
-# In[5]:
+# In[3]:
 
 
 # Return the mean accuracy on the given test data and labels:
@@ -68,7 +41,7 @@ clf.score(X_test, y_test)
 
 # ### Confusion matrix
 
-# In[6]:
+# In[4]:
 
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -84,7 +57,7 @@ plt.show()
 
 # ### Classification report
 
-# In[7]:
+# In[5]:
 
 
 from sklearn.metrics import classification_report
@@ -96,7 +69,7 @@ print(classification_report(y_test, y_pred, target_names=['No', 'Yes']))
 
 # Use specific threshold
 
-# In[8]:
+# In[6]:
 
 
 pred_proba = clf.predict_proba(X_test)
@@ -112,9 +85,11 @@ plt.show()
 
 # ### Classification report
 
-# In[9]:
+# In[7]:
 
 
 
 print(classification_report(y_test, df_['y_pred']))
 
+
+# *To learn more about the method, take a look at ["An Introduction to Statistical Learning"](https://www.statlearning.com/) by James et al. (2021).* 

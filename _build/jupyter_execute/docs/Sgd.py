@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # K Nearest Neighbors
-# 
-# This code tutorial is mainly based on Python code provided by [Jordi Warmenhoven](https://github.com/JWarmenhoven/ISLR-python). To learn more about the method, take a look at ["An Introduction to Statistical Learning"](https://www.statlearning.com/) by James et al. (2021). 
+# # SGDClassifier
 
-# ## Data
-# 
-# ## Data
-# 
-# We use a classification model to predict which customers will default on their credit card debt. To learn more about the data, take a look at the Data section.
-# 
-# We use a simple Python script to perform the necessary data preparation:
+# In[ ]:
+
+
+
+
 
 # In[1]:
 
@@ -33,31 +29,24 @@ df.head(3)
 X = df[['balance', 'income', 'student2']]
 y = df.default2
 
-
-# In[3]:
-
-
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 1)
 
 
-# ## KNN
-
-# ### Model
-
-# In[4]:
+# In[3]:
 
 
-from sklearn import neighbors
+from sklearn.linear_model import SGDClassifier
 
-clf = neighbors.KNeighborsClassifier(n_neighbors=2)
+# fit the model
+clf = SGDClassifier(loss="hinge", alpha=0.01, max_iter=200, fit_intercept=True)
+clf.fit(X_train, y_train)
+
 y_pred = clf.fit(X_train, y_train).predict(X_test)
 
 
-# ### Confusion matrix
-
-# In[5]:
+# In[4]:
 
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -71,12 +60,16 @@ disp.plot()
 plt.show()
 
 
-# ### Classification report
+# In[ ]:
 
-# In[6]:
+
+
+
+
+# In[5]:
 
 
 from sklearn.metrics import classification_report
 
-print(classification_report(y_test, y_pred, digits=3))
+print(classification_report(y_test, y_pred, target_names=['No', 'Yes']))
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>K Nearest Neighbors &#8212; Introduction to Classification</title>
+    <title>SGDClassifier &#8212; Introduction to Classification</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="World happiness report" href="logistic-whr.html" />
-    <link rel="prev" title="Discriminant Analysis" href="lda_qda.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +112,7 @@
   Algorithms
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="logistic.html">
    Logistic Regression
@@ -125,8 +123,8 @@
    Discriminant Analysis
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="knn.html">
    K Nearest Neighbors
   </a>
  </li>
@@ -188,7 +186,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/knn.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/Sgd.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -208,7 +206,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/kirenz/classification/issues/new?title=Issue%20on%20page%20%2Fdocs/knn.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kirenz/classification/issues/new?title=Issue%20on%20page%20%2Fdocs/Sgd.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -231,7 +229,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/kirenz/classification/blob/main/docs/knn.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/kirenz/classification/blob/main/docs/Sgd.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -245,46 +243,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#knn">
-   KNN
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model">
-     Model
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#confusion-matrix">
-     Confusion matrix
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classification-report">
-     Classification report
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -293,16 +251,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="k-nearest-neighbors">
-<h1>K Nearest Neighbors<a class="headerlink" href="#k-nearest-neighbors" title="Permalink to this headline">¶</a></h1>
-<p>This code tutorial is mainly based on Python code provided by <a class="reference external" href="https://github.com/JWarmenhoven/ISLR-python">Jordi Warmenhoven</a>. To learn more about the method, take a look at <a class="reference external" href="https://www.statlearning.com/">“An Introduction to Statistical Learning”</a> by James et al. (2021).</p>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="id1">
-<h2>Data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We use a classification model to predict which customers will default on their credit card debt. To learn more about the data, take a look at the Data section.</p>
-<p>We use a simple Python script to perform the necessary data preparation:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="sgdclassifier">
+<h1>SGDClassifier<a class="headerlink" href="#sgdclassifier" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -380,37 +330,27 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;balance&#39;</span><span class="p">,</span> <span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">]]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">default2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="knn">
-<h2>KNN<a class="headerlink" href="#knn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="model">
-<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDClassifier</span>
 
-<span class="n">clf</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># fit the model</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="confusion-matrix">
-<h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
@@ -426,32 +366,27 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/knn_9_0.png" src="../_images/knn_9_0.png" />
+<img alt="../_images/Sgd_5_0.png" src="../_images/Sgd_5_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="classification-report">
-<h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0      0.975     0.996     0.985      2909
-           1      0.571     0.176     0.269        91
+          No       0.98      0.90      0.94      2909
+         Yes       0.12      0.44      0.19        91
 
-    accuracy                          0.971      3000
-   macro avg      0.773     0.586     0.627      3000
-weighted avg      0.963     0.971     0.963      3000
+    accuracy                           0.89      3000
+   macro avg       0.55      0.67      0.57      3000
+weighted avg       0.95      0.89      0.92      3000
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -481,21 +416,7 @@ weighted avg      0.963     0.971     0.963      3000
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="lda_qda.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Discriminant Analysis</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="logistic-whr.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">World happiness report</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>

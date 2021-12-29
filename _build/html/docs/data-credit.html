@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>K Nearest Neighbors &#8212; Introduction to Classification</title>
+    <title>Credit data &#8212; Introduction to Classification</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="World happiness report" href="logistic-whr.html" />
-    <link rel="prev" title="Discriminant Analysis" href="lda_qda.html" />
+    <link rel="next" title="Logistic Regression" href="logistic.html" />
+    <link rel="prev" title="Welcome" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -102,9 +102,9 @@
   Data
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-credit.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Credit data
   </a>
  </li>
@@ -114,7 +114,7 @@
   Algorithms
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="logistic.html">
    Logistic Regression
@@ -125,8 +125,8 @@
    Discriminant Analysis
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="knn.html">
    K Nearest Neighbors
   </a>
  </li>
@@ -188,7 +188,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/knn.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/data-credit.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -208,7 +208,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/kirenz/classification/issues/new?title=Issue%20on%20page%20%2Fdocs/knn.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kirenz/classification/issues/new?title=Issue%20on%20page%20%2Fdocs/data-credit.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -231,7 +231,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/kirenz/classification/blob/main/docs/knn.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/kirenz/classification/blob/main/docs/data-credit.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -251,36 +251,41 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
+  <a class="reference internal nav-link" href="#import-data">
+   Import data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Data
+  <a class="reference internal nav-link" href="#inspect-data">
+   Inspect data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#knn">
-   KNN
+  <a class="reference internal nav-link" href="#data-preparation">
+   Data preparation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model">
-     Model
+    <a class="reference internal nav-link" href="#categorical-data">
+     Categorical data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#confusion-matrix">
-     Confusion matrix
+    <a class="reference internal nav-link" href="#label-and-features">
+     Label and features
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classification-report">
-     Classification report
+    <a class="reference internal nav-link" href="#train-test-split">
+     Train test split
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration">
+   Data exploration
+  </a>
  </li>
 </ul>
 
@@ -293,27 +298,32 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="k-nearest-neighbors">
-<h1>K Nearest Neighbors<a class="headerlink" href="#k-nearest-neighbors" title="Permalink to this headline">¶</a></h1>
-<p>This code tutorial is mainly based on Python code provided by <a class="reference external" href="https://github.com/JWarmenhoven/ISLR-python">Jordi Warmenhoven</a>. To learn more about the method, take a look at <a class="reference external" href="https://www.statlearning.com/">“An Introduction to Statistical Learning”</a> by James et al. (2021).</p>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="id1">
-<h2>Data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We use a classification model to predict which customers will default on their credit card debt. To learn more about the data, take a look at the Data section.</p>
-<p>We use a simple Python script to perform the necessary data preparation:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="credit-data">
+<span id="section-data"></span><h1>Credit data<a class="headerlink" href="#credit-data" title="Permalink to this headline">¶</a></h1>
+<p>The credit data is a simulated data set containing information on ten thousand customers (taken from <span id="id1"></span>). The aim here is to use a classification model to predict which customers will default on their credit card debt (i.e., failure to repay a debt):</p>
+<ul class="simple">
+<li><p>default: A categorical variable with levels No and Yes indicating whether the customer defaulted on their debt</p></li>
+<li><p>student: A categorical variable with levels No and Yes indicating whether the customer is a student</p></li>
+<li><p>balance: The average balance that the customer has remaining on their credit card after making their monthly payment</p></li>
+<li><p>income: Income of customer</p></li>
+</ul>
+<div class="section" id="import-data">
+<h2>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/classification/main/_static/data/Default.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># Note: factorize() returns two objects: a label array and an array with the unique values.</span>
-<span class="c1"># We are only interested in the first object. </span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;default2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">factorize</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;student2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">student</span><span class="o">.</span><span class="n">factorize</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inspect-data">
+<h2>Inspect data<a class="headerlink" href="#inspect-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -340,8 +350,6 @@
       <th>student</th>
       <th>balance</th>
       <th>income</th>
-      <th>default2</th>
-      <th>student2</th>
     </tr>
   </thead>
   <tbody>
@@ -351,8 +359,6 @@
       <td>No</td>
       <td>729.526495</td>
       <td>44361.625074</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -360,8 +366,6 @@
       <td>Yes</td>
       <td>817.180407</td>
       <td>12106.134700</td>
-      <td>0</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -369,8 +373,158 @@
       <td>No</td>
       <td>1073.549164</td>
       <td>31767.138947</td>
-      <td>0</td>
-      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>No</td>
+      <td>No</td>
+      <td>529.250605</td>
+      <td>35704.493935</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>No</td>
+      <td>No</td>
+      <td>785.655883</td>
+      <td>38463.495879</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9995</th>
+      <td>No</td>
+      <td>No</td>
+      <td>711.555020</td>
+      <td>52992.378914</td>
+    </tr>
+    <tr>
+      <th>9996</th>
+      <td>No</td>
+      <td>No</td>
+      <td>757.962918</td>
+      <td>19660.721768</td>
+    </tr>
+    <tr>
+      <th>9997</th>
+      <td>No</td>
+      <td>No</td>
+      <td>845.411989</td>
+      <td>58636.156984</td>
+    </tr>
+    <tr>
+      <th>9998</th>
+      <td>No</td>
+      <td>No</td>
+      <td>1569.009053</td>
+      <td>36669.112365</td>
+    </tr>
+    <tr>
+      <th>9999</th>
+      <td>No</td>
+      <td>Yes</td>
+      <td>200.922183</td>
+      <td>16862.952321</td>
+    </tr>
+  </tbody>
+</table>
+<p>10000 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 4 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   default  10000 non-null  object 
+ 1   student  10000 non-null  object 
+ 2   balance  10000 non-null  float64
+ 3   income   10000 non-null  float64
+dtypes: float64(2), object(2)
+memory usage: 312.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check for missing values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>default    0
+student    0
+balance    0
+income     0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-preparation">
+<h2>Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="categorical-data">
+<h3>Categorical data<a class="headerlink" href="#categorical-data" title="Permalink to this headline">¶</a></h3>
+<p>First, we convert categorical data into indicator variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;student&#39;</span><span class="p">]],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">dummies</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>default_Yes</th>
+      <th>student_Yes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -378,12 +532,78 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;balance&#39;</span><span class="p">,</span> <span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">]]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">default2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># combine data and drop original categorical variables</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">dummies</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;student&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>balance</th>
+      <th>income</th>
+      <th>default_Yes</th>
+      <th>student_Yes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>729.526495</td>
+      <td>44361.625074</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>817.180407</td>
+      <td>12106.134700</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1073.549164</td>
+      <td>31767.138947</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="label-and-features">
+<h3>Label and features<a class="headerlink" href="#label-and-features" title="Permalink to this headline">¶</a></h3>
+<p>Next, we create our y label and features:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">default_Yes</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;default_Yes&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="train-test-split">
+<h3>Train test split<a class="headerlink" href="#train-test-split" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -394,64 +614,28 @@
 </div>
 </div>
 </div>
-<div class="section" id="knn">
-<h2>KNN<a class="headerlink" href="#knn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="model">
-<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="data-exploration">
+<h2>Data exploration<a class="headerlink" href="#data-exploration" title="Permalink to this headline">¶</a></h2>
+<p>Create data for exploratory data analysis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
-
-<span class="n">clf</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+<span class="n">train_dataset</span><span class="p">[</span><span class="s1">&#39;default_Yes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="confusion-matrix">
-<h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span>
-                              <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;default_Yes&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/knn_9_0.png" src="../_images/knn_9_0.png" />
-</div>
-</div>
-</div>
-<div class="section" id="classification-report">
-<h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
-
-           0      0.975     0.996     0.985      2909
-           1      0.571     0.176     0.269        91
-
-    accuracy                          0.971      3000
-   macro avg      0.773     0.586     0.627      3000
-weighted avg      0.963     0.971     0.963      3000
-</pre></div>
-</div>
-</div>
+<img alt="../_images/data-credit_20_0.png" src="../_images/data-credit_20_0.png" />
 </div>
 </div>
 </div>
@@ -482,17 +666,17 @@ weighted avg      0.963     0.971     0.963      3000
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="lda_qda.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Discriminant Analysis</p>
+            <p class="prev-next-title">Welcome</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="logistic-whr.html" title="next page">
+    <a class='right-next' id="next-link" href="logistic.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">World happiness report</p>
+        <p class="prev-next-title">Logistic Regression</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
