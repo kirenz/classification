@@ -7,10 +7,11 @@ parts:
   - caption: Algorithms
     chapters:
     - file: docs/logistic.ipynb
-    - file: docs/sgd.ipynb
+    - file: docs/Sgd.ipynb
     - file: docs/gradientboosting.ipynb    
     - file: docs/lda_qda.ipynb
     - file: docs/knn.ipynb
+    - file: docs/Svm.ipynb
   - caption: Case Study
     chapters:
     - file: docs/logistic-whr.ipynb
