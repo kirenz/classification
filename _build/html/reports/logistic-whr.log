@@ -22,7 +22,7 @@ model = smf.glm(formula = 'Happy ~ Health + Family + Trust' , data=df_train, fam
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/9c/_3s5jt3n60j__flsgl0t72340000gn/T/ipykernel_4190/1313853493.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/9c/_3s5jt3n60j__flsgl0t72340000gn/T/ipykernel_4476/1313853493.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mmodel[0m [0;34m=[0m [0msmf[0m[0;34m.[0m[0mglm[0m[0;34m([0m[0mformula[0m [0;34m=[0m [0;34m'Happy ~ Health + Family + Trust'[0m [0;34m,[0m [0mdata[0m[0;34m=[0m[0mdf_train[0m[0;34m,[0m [0mfamily[0m[0;34m=[0m[0msm[0m[0;34m.[0m[0mfamilies[0m[0;34m.[0m[0mBinomial[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'sm' is not defined

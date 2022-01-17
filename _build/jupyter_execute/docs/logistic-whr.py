@@ -317,11 +317,11 @@ for i in list:
 
 #   General examples to explain the concepts:
 #   
-#   - When we have a case where it is important to predict true positives correctly and ther is a cost associated with false positives, then we should use precision. 
+#   - When we have a case where it is important to predict true positives correctly and there is a cost associated with false positives, then we should use precision (typically we use the `macro avg`). 
 #   
-#   - The metric recall would be a good metric if we want to target as many true positive cases as possible and don't care a lot about false positives. 
+#   - The metric recall (the `macro avg`) would be a good metric if we want to target as many true positive cases as possible and don't care a lot about false positives. 
 # 
-#   - If we want a balance between recall and precision, we should use the F-Score.
+#   - If we want a balance between recall and precision, we should use the F1-Score (again the `macro avg`).
 
 # ## 2.4 Use test data 
 # 

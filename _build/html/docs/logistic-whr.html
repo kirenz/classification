@@ -1647,9 +1647,9 @@ weighted avg       0.82      0.82      0.81       109
 </div>
 <p>General examples to explain the concepts:</p>
 <ul class="simple">
-<li><p>When we have a case where it is important to predict true positives correctly and ther is a cost associated with false positives, then we should use precision.</p></li>
-<li><p>The metric recall would be a good metric if we want to target as many true positive cases as possible and don’t care a lot about false positives.</p></li>
-<li><p>If we want a balance between recall and precision, we should use the F-Score.</p></li>
+<li><p>When we have a case where it is important to predict true positives correctly and there is a cost associated with false positives, then we should use precision (typically we use the <code class="docutils literal notranslate"><span class="pre">macro</span> <span class="pre">avg</span></code>).</p></li>
+<li><p>The metric recall (the <code class="docutils literal notranslate"><span class="pre">macro</span> <span class="pre">avg</span></code>) would be a good metric if we want to target as many true positive cases as possible and don’t care a lot about false positives.</p></li>
+<li><p>If we want a balance between recall and precision, we should use the F1-Score (again the <code class="docutils literal notranslate"><span class="pre">macro</span> <span class="pre">avg</span></code>).</p></li>
 </ul>
 </div>
 <div class="section" id="use-test-data">
