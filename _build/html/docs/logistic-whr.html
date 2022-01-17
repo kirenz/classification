@@ -268,11 +268,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-setup">
-   Python setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-data">
    1.0 Import data
   </a>
@@ -298,8 +293,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploratory-data-analysis">
-   1.5 Exploratory data analysis
+  <a class="reference internal nav-link" href="#eda">
+   1.5 EDA
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -378,30 +373,13 @@ New York: Sustainable Development Solutions Network.</em></p>
 <li><p>2.4 Use the test data to evaluate your model with a threshold of 0.5.</p></li>
 </ul>
 </div>
-<div class="section" id="python-setup">
-<h2>Python setup<a class="headerlink" href="#python-setup" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="import-data">
 <h2>1.0 Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the csv data files into pandas dataframes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Load the csv data files into pandas dataframes</span>
 <span class="n">PATH</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/kirenz/datasets/master/happy.csv&#39;</span> 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">PATH</span><span class="p">)</span>
 </pre></div>
@@ -685,7 +663,9 @@ memory usage: 8.7+ KB
 <h2>1.2 Create flag<a class="headerlink" href="#create-flag" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness_Score&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness_Score&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1034,16 +1014,19 @@ memory usage: 7.5+ KB
 </div></div></div>
 </div>
 </div>
-<div class="section" id="exploratory-data-analysis">
-<h2>1.5 Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eda">
+<h2>1.5 EDA<a class="headerlink" href="#eda" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Happy&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Happy&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-whr_25_0.png" src="../_images/logistic-whr_25_0.png" />
+<img alt="../_images/logistic-whr_23_0.png" src="../_images/logistic-whr_23_0.png" />
 </div>
 </div>
 </div>
@@ -1065,7 +1048,7 @@ memory usage: 7.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-whr_27_0.png" src="../_images/logistic-whr_27_0.png" />
+<img alt="../_images/logistic-whr_25_0.png" src="../_images/logistic-whr_25_0.png" />
 </div>
 </div>
 <p>We see that some of the features are correlated. In particular, Economy and Health are highly correlated. This means we should not include both Economy and Health as predictors in our model.</p>
@@ -1154,7 +1137,9 @@ memory usage: 7.5+ KB
 <p>In this example, we use the statsmodel’s formula api to train our model. Therefore, we use our pandas <code class="docutils literal notranslate"><span class="pre">df_train</span></code> data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;Happy ~ Health + Family + Trust&#39;</span> <span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">())</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;Happy ~ Health + Family + Trust&#39;</span> <span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">())</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1174,7 +1159,7 @@ Model Family:                Binomial   Df Model:                            3
 Link Function:                  logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -32.153
 Date:                Mon, 17 Jan 2022   Deviance:                       64.306
-Time:                        11:23:28   Pearson chi2:                     77.1
+Time:                        12:44:04   Pearson chi2:                     77.1
 No. Iterations:                     7   Pseudo R-squ. (CS):             0.5404
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -1216,7 +1201,7 @@ Model Family:                Binomial   Df Model:                            2
 Link Function:                  logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -32.599
 Date:                Mon, 17 Jan 2022   Deviance:                       65.198
-Time:                        11:23:28   Pearson chi2:                     70.4
+Time:                        12:44:04   Pearson chi2:                     70.4
 No. Iterations:                     7   Pseudo R-squ. (CS):             0.5366
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -1574,7 +1559,7 @@ Family         7.8839      2.127      3.707      0.000       3.716      12.052
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-whr_45_0.png" src="../_images/logistic-whr_45_0.png" />
+<img alt="../_images/logistic-whr_43_0.png" src="../_images/logistic-whr_43_0.png" />
 </div>
 </div>
 <p>Now we use scikit learn`s classification report:</p>

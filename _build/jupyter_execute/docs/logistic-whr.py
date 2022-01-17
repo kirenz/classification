@@ -51,27 +51,12 @@
 # 
 # - 2.4 Use the test data to evaluate your model with a threshold of 0.5.
 
-# ## Python setup
+# ## 1.0 Import data
 
-# In[227]:
+# In[281]:
 
 
 import pandas as pd
-import numpy as np
-
-import statsmodels.formula.api as smf
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-sns.set_theme()
-get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-# ## 1.0 Import data
-
-# In[228]:
-
 
 # Load the csv data files into pandas dataframes
 PATH = 'https://raw.githubusercontent.com/kirenz/datasets/master/happy.csv' 
@@ -80,14 +65,14 @@ df = pd.read_csv(PATH)
 
 # First of all, let's take a look at the data set.
 
-# In[229]:
+# In[282]:
 
 
 # show data set
 df
 
 
-# In[230]:
+# In[283]:
 
 
 df.info()
@@ -95,14 +80,14 @@ df.info()
 
 # ## 1.1 Drop and rename
 
-# In[231]:
+# In[284]:
 
 
 # Drop variables we don't need
 df = df.drop('Unnamed: 0', axis=1)
 
 
-# In[232]:
+# In[285]:
 
 
 df.columns = ['Country', 'Happiness_Score', 'Economy', 'Family', 'Health', 'Trust']
@@ -111,19 +96,21 @@ df.head()
 
 # ## 1.2 Create flag
 
-# In[233]:
+# In[286]:
 
+
+import numpy as np
 
 df['Happy'] = np.where(df['Happiness_Score']>5.5, 1, 0)
 
 
-# In[234]:
+# In[287]:
 
 
 df
 
 
-# In[235]:
+# In[288]:
 
 
 df.Happy.value_counts()
@@ -131,13 +118,13 @@ df.Happy.value_counts()
 
 # ## 1.3 Drop feature
 
-# In[236]:
+# In[289]:
 
 
 df = df.drop('Happiness_Score', axis=1)
 
 
-# In[237]:
+# In[290]:
 
 
 df.info()
@@ -145,7 +132,7 @@ df.info()
 
 # ## 1.4 Data splitting
 
-# In[238]:
+# In[291]:
 
 
 from sklearn.model_selection import train_test_split
@@ -156,7 +143,7 @@ y = df['Happy']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=12)
 
 
-# In[239]:
+# In[292]:
 
 
 # Make data exploration set
@@ -166,10 +153,13 @@ df_train = df_train.join(pd.DataFrame(y_train))
 df_train
 
 
-# ## 1.5 Exploratory data analysis 
+# ## 1.5 EDA 
 
-# In[240]:
+# In[293]:
 
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+import seaborn as sns
 
 sns.pairplot(hue="Happy", data=df_train);
 
@@ -178,7 +168,7 @@ sns.pairplot(hue="Happy", data=df_train);
 # 
 # Inspect pairwise relationship between variables (correlation):
 
-# In[241]:
+# In[294]:
 
 
 # Calculate correlation using the default method ( "pearson")
@@ -196,7 +186,7 @@ sns.heatmap(corr, mask=mask, cmap=cmap, annot=True, square=True, annot_kws={"siz
 # 
 # Let`s also check the variance inflation factor for multicollinearity (which should not exceed 5):  
 
-# In[242]:
+# In[295]:
 
 
 from statsmodels.tools.tools import add_constant
@@ -222,13 +212,15 @@ vif.round(2)
 
 # In this example, we use the statsmodel's formula api to train our model. Therefore, we use our pandas `df_train` data. 
 
-# In[243]:
+# In[296]:
 
+
+import statsmodels.formula.api as smf
 
 model = smf.glm(formula = 'Happy ~ Health + Family + Trust' , data=df_train, family=sm.families.Binomial()).fit()
 
 
-# In[244]:
+# In[297]:
 
 
 print(model.summary())
@@ -238,14 +230,14 @@ print(model.summary())
 
 # ## 2.1 Update Model
 
-# In[245]:
+# In[298]:
 
 
 # Define and fit logistic regression model
 model_2 = smf.glm(formula = 'Happy ~ Health + Family' , data=df_train, family=sm.families.Binomial()).fit()
 
 
-# In[246]:
+# In[299]:
 
 
 print(model_2.summary())
@@ -253,20 +245,20 @@ print(model_2.summary())
 
 # ## 2.2 Thresholds 
 
-# In[247]:
+# In[300]:
 
 
 # Predict and join probabilty to original dataframe
 df_train['y_score'] = model_2.predict()
 
 
-# In[248]:
+# In[301]:
 
 
 df_train
 
 
-# In[249]:
+# In[302]:
 
 
 # Use thresholds to discretize Probability
@@ -281,7 +273,7 @@ df_train
 
 # Example of confusion matrix (not necessary)
 
-# In[250]:
+# In[303]:
 
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -294,7 +286,7 @@ disp.plot();
 
 # Now we use scikit learn`s classification report:
 
-# In[251]:
+# In[304]:
 
 
 from sklearn.metrics import classification_report
@@ -305,7 +297,7 @@ print(classification_report(df_train['Happy'], df_train['thresh_04'], target_nam
 
 # Show all classification reports with a for loop:
 
-# In[252]:
+# In[305]:
 
 
 list = ['thresh_04', 'thresh_05', 'thresh_07']
@@ -327,7 +319,7 @@ for i in list:
 # 
 # Note that we don`t need to create a pandas dataframe.
 
-# In[253]:
+# In[306]:
 
 
 # Predict test data
