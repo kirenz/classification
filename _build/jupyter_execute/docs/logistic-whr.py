@@ -21,49 +21,45 @@
 # 
 # Data preparation:
 # 
-# - 1.1 Rename the variables in the DataFrame to 'Country', 'Happiness_Score', 'Economy', 'Family', 'Health' and 'Trust'. Check for missing values.    
+# - 1.0 Import the data and perform a quick data inspection.  
 # 
-# - 1.2 Create a new categorical variable called `Happy`, where all countries with a Happiness_Score > 5.5 are labeled with 'Yes', otherwise 'No'.  
+# - 1.1 Drop the variable 'Unnamed: 0' and rename the variables in the DataFrame to 'Country', 'Happiness_Score', 'Economy', 'Family', 'Health' and 'Trust'. 
+# 
+# - 1.2 Create a new categorical variable called `Happy`, where all countries with a Happiness_Score > 5.5 are labeled with 1, otherwise 0.  
 #     
-# - 1.3 Delete the variable `Happiness_Score` and change the data types if necessary (categorical, float, integer...). 
+# - 1.3 Delete the variable `Happiness_Score` 
+#   
+# - 1.4 Use scikit-learn to make the train test split (`X_train`, `X_test`, `y_train`, `y_test`) and create a pandas data exploration set from your training data (`df_train`). 
+#   
+# - 1.5 Perform exploratory data analysis to find differences in the distributions of the two groups (Happy: `1` and `0`).  
 # 
-# - 1.4 Visualize the distributions of the numerical variables and display the distributions of the two groups (Happy: 'Yes' and 'No').  
-# 
-# - 1.5. Check for relationships with correlations.
+# - 1.6. Check for relationships with correlations (use pairwise correlations and variance inflation factor).
 
 # Logistic regression model:
 # 
-# - 2.a) Fit a logistic regression model with all predictor variables (response: `Happy`; predictors: `Economy`, `Family`, `Health` and `Trust`).  
+# - 2.0 Fit a logistic regression model with the following predictor variables (response: `Happy`; predictors: `Family`, `Health` and `Trust`) on the pandas training data (df_train).
 # 
-# - 2.b) Please explain wether you would recommend to exclude a predictor variable from your model (from task 2a)). Update your model if necessary.
+# - 2.1 Please explain wether you would recommend to exclude a predictor variable from your model (from task 2a)). Update your model if necessary.
 # 
-# - 2.c) Use your updated model and predict the probability that a country has "no happy" inhabitants. Classify this countries with label 'Yes' if the predicted probability exceeds:
+# - 2.2 Use your updated model and predict the probability that a country has "happy" inhabitants (use df_train) based on 3 different thresholds. In particular, classify countries with label `1` if the predicted probability exceeds the thresholds stated below (otherwise classify the country as happy (with `0`)) :
 # 
-#     - c1): 0.4 (i.e. threshold = 0.4) 
-#     - c2): 0.5 (i.e. threshold = 0.5)
-#     - c3): 0.7 (i.e. threshold = 0.7). 
-#     
-# Otherwise classify the country as happy (with label 'No').
+#   - 0.4 (i.e. threshold = 0.4) 
+#   - 0.5 (i.e. threshold = 0.5)
+#   - 0.7 (i.e. threshold = 0.7)
 # 
+# - 2.3 Compute the classification report (`from sklearn.metrics import classification_report`) in order to determine how many observations were correctly or incorrectly classified. Which threshold would you recommend? 
 # 
-# - 2.d) Compute the confusion matrix for every threshold (c1), c2) and c3)) in order to determine how many observations were correctly or incorrectly classified. Furthermore, use the results from the confusion matrix and create the following variables: true positive; true negative; false positive and false negative. Use these variables to calculate the following measures: "Accuracy", Precision" (what proportion of positive identifications was actually correct?), "Recall" (what proportion of actual positives was identified correctly) and the F1 score (measure of a test's accuracy) for the thresholds in c1), c2) and c3). Which threshold would you recommend? 
-# 
-# Hints: **Precision** is defined as the number of true positives over the number of true positives plus the number of false positives. **Recall** is defined as the number of true positives over the number of true positives plus the number of false negatives. These two quantities are related to the **F1 score**, which is defined as the harmonic mean of precision and recall: $F1 = 2* ((Precision * Recall)/(Precision + Recall)).$
-# 
-# - 2.e) Fit the logistic regression model using a training data set. Compute the confusion matrix and accuracy for the held out data (test data size = 30%). Use a threshold of 0.5.
+# - 2.4 Use the test data to evaluate your model with a threshold of 0.5.
 
 # ## Python setup
 
-# In[1]:
+# In[227]:
 
 
 import pandas as pd
 import numpy as np
 
-import statsmodels.api as sm
 import statsmodels.formula.api as smf
-
-from scipy.stats import chi2_contingency, fisher_exact
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -72,9 +68,9 @@ sns.set_theme()
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# ## Data preparation
+# ## 1.0 Import data
 
-# In[2]:
+# In[228]:
 
 
 # Load the csv data files into pandas dataframes
@@ -82,107 +78,111 @@ PATH = 'https://raw.githubusercontent.com/kirenz/datasets/master/happy.csv'
 df = pd.read_csv(PATH)
 
 
-# ## Tidying data
-
-# ### Data inspection
-
 # First of all, let's take a look at the data set.
 
-# In[3]:
+# In[229]:
 
 
 # show data set
 df
 
 
-# In[4]:
+# In[230]:
 
 
-# Drop variables
+df.info()
+
+
+# ## 1.1 Drop and rename
+
+# In[231]:
+
+
+# Drop variables we don't need
 df = df.drop('Unnamed: 0', axis=1)
 
 
-# In[5]:
-
-
-df.describe()
-
-
-# ## 1.1 Rename and missing
-
-# In[6]:
+# In[232]:
 
 
 df.columns = ['Country', 'Happiness_Score', 'Economy', 'Family', 'Health', 'Trust']
 df.head()
 
 
-# Handle missing values
-
-# In[7]:
-
-
-print(df.isnull().sum())
-
-
 # ## 1.2 Create flag
 
-# In[8]:
+# In[233]:
 
 
-df['Happy'] = np.where(df['Happiness_Score']>5.5, 'Yes', 'No')
+df['Happy'] = np.where(df['Happiness_Score']>5.5, 1, 0)
 
 
-# In[9]:
+# In[234]:
 
 
 df
 
 
-# In[10]:
+# In[235]:
 
 
 df.Happy.value_counts()
 
 
-# ## 1.3 Drop and data format
+# ## 1.3 Drop feature
 
-# In[11]:
+# In[236]:
 
 
 df = df.drop('Happiness_Score', axis=1)
 
 
-# In[12]:
+# In[237]:
 
 
 df.info()
 
 
-# In[13]:
+# ## 1.4 Data splitting
+
+# In[238]:
 
 
-# Change data types
-df['Country'] = df['Country'].astype('category')
-df['Happy'] = df['Happy'].astype('category')
+from sklearn.model_selection import train_test_split
+
+X = df.drop(columns = ['Country', 'Happy'])
+y = df['Happy']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=12)
 
 
-# ## 1.4 Distribution
-
-# In[14]:
+# In[239]:
 
 
-sns.pairplot(hue="Happy", data=df);
+# Make data exploration set
+df_train = pd.DataFrame(X_train.copy())
+df_train = df_train.join(pd.DataFrame(y_train))
+
+df_train
 
 
-# ## 1.5 Correlation
+# ## 1.5 Exploratory data analysis 
 
-# In[15]:
+# In[240]:
 
 
-# Inspect relationship between variables (correlation)
+sns.pairplot(hue="Happy", data=df_train);
+
+
+# ## 1.6 Correlation
+# 
+# Inspect pairwise relationship between variables (correlation):
+
+# In[241]:
+
+
 # Calculate correlation using the default method ( "pearson")
-corr = df.corr()
+corr = df_train.corr()
 # optimize aesthetics: generate mask for removing duplicate / unnecessary info
 mask = np.zeros_like(corr, dtype=bool)
 mask[np.triu_indices_from(mask)] = True
@@ -192,105 +192,127 @@ cmap = sns.diverging_palette(220, 10, as_cmap=True)
 sns.heatmap(corr, mask=mask, cmap=cmap, annot=True, square=True, annot_kws={"size": 12});
 
 
-# ## 2a) Model with all predictors
+# We see that some of the features are correlated. In particular, Economy and Health are highly correlated. This means we should not include both Economy and Health as predictors in our model. 
+# 
+# Let`s also check the variance inflation factor for multicollinearity (which should not exceed 5):  
 
-# In[16]:
+# In[242]:
 
 
-model = smf.glm(formula = 'Happy ~ Economy + Family + Health + Trust' , data=df, family=sm.families.Binomial()).fit()
+from statsmodels.tools.tools import add_constant
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+# choose features and add constant
+features = add_constant(df_train)
+# create empty DataFrame
+vif = pd.DataFrame()
+# calculate vif
+vif["VIF Factor"] = [variance_inflation_factor(features.values, i) for i in range(features.shape[1])]
+# add feature names
+vif["Feature"] = features.columns
+
+vif.round(2)
 
 
-# In[17]:
+# We observe that Economy has a fairly high VIF of almost 5. Note that since we check for multicollinearity, we don't catch the high pairwise correlation between Economy and Health. As a matter of fact, depending on your data, you could also have low pairwise correlations, but have high VIF's.
+# 
+# Based on the findings of our correlation analysis, we will drop the feature Economy from our model.
+
+# ## 2.0 First model 
+
+# In this example, we use the statsmodel's formula api to train our model. Therefore, we use our pandas `df_train` data. 
+
+# In[243]:
+
+
+model = smf.glm(formula = 'Happy ~ Health + Family + Trust' , data=df_train, family=sm.families.Binomial()).fit()
+
+
+# In[244]:
 
 
 print(model.summary())
 
 
-# Note that Statsmodels decoded the dependent variable as Happy "No" and Happy "Yes". Since "No" comes first, the model will predict the label "No".
+# In this case, the model will predict the label "1".
 
-# ## 2. b) Update Model
+# ## 2.1 Update Model
 
-# In[18]:
+# In[245]:
 
 
 # Define and fit logistic regression model
-model_2 = smf.glm(formula = 'Happy ~ Economy + Family' , data=df, family=sm.families.Binomial()).fit()
+model_2 = smf.glm(formula = 'Happy ~ Health + Family' , data=df_train, family=sm.families.Binomial()).fit()
 
 
-# In[19]:
+# In[246]:
 
 
 print(model_2.summary())
 
 
-# ## 2c) Predict
+# ## 2.2 Thresholds 
 
-# In[20]:
+# In[247]:
 
 
 # Predict and join probabilty to original dataframe
-df['Probability_no'] = model_2.predict()
+df_train['y_score'] = model_2.predict()
 
 
-# In[21]:
+# In[248]:
 
 
-df
+df_train
 
 
-# In[22]:
+# In[249]:
 
 
 # Use thresholds to discretize Probability
-df['Threshold 0.4'] = np.where(df['Probability_no'] > 0.4, 'No', 'Yes')
-df['Threshold 0.5'] = np.where(df['Probability_no'] > 0.5, 'No', 'Yes')
-df['Threshold 0.6'] = np.where(df['Probability_no'] > 0.6, 'No', 'Yes')
-df['Threshold 0.7'] = np.where(df['Probability_no'] > 0.7, 'No', 'Yes')
+df_train['thresh_04'] = np.where(df_train['y_score'] > 0.4, 1, 0)
+df_train['thresh_05'] = np.where(df_train['y_score'] > 0.5, 1, 0)
+df_train['thresh_07'] = np.where(df_train['y_score'] > 0.7, 1, 0)
 
-df
-
-
-# ## 2. d) Confusion Matrix & Metrics
-
-# In[23]:
+df_train
 
 
-def print_metrics(df, predicted):
-    # Header
-    print('-'*50)
-    print(f'Metrics for: {predicted}\n')
-    
-    # Confusion Matrix
-    y_actu = pd.Series(df['Happy'], name='Actual')
-    y_pred = pd.Series(df[predicted], name='Predicted')
-    df_conf = pd.crosstab(y_actu, y_pred)
-    display(df_conf)
-    
-    # Confusion Matrix to variables:
-    pop = df_conf.values.sum()
-    tp = df_conf['Yes']['Yes']
-    tn = df_conf['No']['No']
-    fp = df_conf['Yes']['No']
-    fn = df_conf['No']['Yes']
-    
-    # Metrics
-    accuracy = (tp + tn) / pop
-    precision = tp / (tp + fp)
-    recall = tp / (tp + fn)
-    f1_score = 2 * ((precision * recall) / (precision + recall))
-    print(f'Accuracy:  {accuracy:.4f}')
-    print(f'Precision: {precision:.4f}')
-    print(f'Recall:    {recall:.4f}')
-    print(f'F1 Score:  {f1_score:.4f} \n')
+# ## 2.3 Classification report
+
+# Example of confusion matrix (not necessary)
+
+# In[250]:
 
 
-# In[24]:
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+cm = confusion_matrix(df_train['Happy'], df_train['thresh_04'])
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Happy', 'Not Happy'])
+
+disp.plot();
 
 
-print_metrics(df, 'Threshold 0.4')
-print_metrics(df, 'Threshold 0.5')
-print_metrics(df, 'Threshold 0.6')
-print_metrics(df, 'Threshold 0.7')
+# Now we use scikit learn`s classification report:
+
+# In[251]:
+
+
+from sklearn.metrics import classification_report
+
+target_names = ['Happy', 'Not Happy']
+print(classification_report(df_train['Happy'], df_train['thresh_04'], target_names=target_names))
+
+
+# Show all classification reports with a for loop:
+
+# In[252]:
+
+
+list = ['thresh_04', 'thresh_05', 'thresh_07']
+
+for i in list:
+     print("Threshold:", i)
+     print(classification_report(df_train['Happy'], df_train[i], target_names=target_names))
 
 
 #   General examples to explain the concepts:
@@ -301,76 +323,17 @@ print_metrics(df, 'Threshold 0.7')
 # 
 #   - If we want a balance between recall and precision, we should use the F-Score.
 
-# ## 2. e) Use train test data 
+# ## 2.4 Use test data 
+# 
+# Note that we don`t need to create a pandas dataframe.
 
-# If we use train and test data, we need to change some of the steps above since we make use of a scikit learn library.
-
-# In[25]:
-
-
-# Encode happy = 0 and not happy = 1. Convert to float
-
-y = pd.get_dummies(df['Happy'])
-y = y['No'].astype('float')
+# In[253]:
 
 
-# In[26]:
+# Predict test data
+y_score_test = model_2.predict(X_test)
 
+thresh_05_test = np.where(y_score_test > 0.5, 1, 0)
 
-# Select features
-X = df[['Economy', 'Family']]
-
-
-# In[27]:
-
-
-# Train test split
-from sklearn.model_selection import train_test_split
-
-train_X, test_X, train_y, test_y = train_test_split(X, y, test_size=0.3, random_state=12)
-
-
-# In[28]:
-
-
-print("Training size:", len(train_X))
-print("Test size:", len(test_X))
-
-
-# In[29]:
-
-
-# Train logistic regression model with training set
-logit = sm.Logit(train_y, train_X).fit()
-
-
-# In[30]:
-
-
-print(logit.summary())
-
-
-# In[31]:
-
-
-# create empty dataframe
-data = pd.DataFrame()
-
-# include prediction from test data
-data['Probability'] = logit.predict(test_X)
-
-
-# In[32]:
-
-
-# Calculate metrics
-data['Happy'] = np.where(test_y == 1.0, 'No', 'Yes')  
-data['Threshold 0.5'] = np.where(data['Probability'] > 0.5, 'No', 'Yes')  
-data.head(7)
-
-
-# In[33]:
-
-
-print_metrics(data, 'Threshold 0.5')
+print(classification_report(y_test, thresh_05_test, target_names=target_names))
 
