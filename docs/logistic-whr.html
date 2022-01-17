@@ -298,13 +298,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#distribution">
-   1.4 Distribution
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   1.5 Exploratory data analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#correlation">
-   1.5 Correlation
+   1.6 Correlation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -360,23 +360,20 @@ New York: Sustainable Development Solutions Network.</em></p>
 <li><p>1.2 Create a new categorical variable called <code class="docutils literal notranslate"><span class="pre">Happy</span></code>, where all countries with a Happiness_Score &gt; 5.5 are labeled with 1, otherwise 0.</p></li>
 <li><p>1.3 Delete the variable <code class="docutils literal notranslate"><span class="pre">Happiness_Score</span></code></p></li>
 <li><p>1.4 Use scikit-learn to make the train test split (<code class="docutils literal notranslate"><span class="pre">X_train</span></code>, <code class="docutils literal notranslate"><span class="pre">X_test</span></code>, <code class="docutils literal notranslate"><span class="pre">y_train</span></code>, <code class="docutils literal notranslate"><span class="pre">y_test</span></code>) and create a pandas data exploration set from your training data (<code class="docutils literal notranslate"><span class="pre">df_train</span></code>).</p></li>
-<li><p>1.4 Perform exploratory data analysis to find differences in the distributions of the two groups (Happy: <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p></li>
-<li><p>1.5. Check for relationships with correlations (use pairwise correlations and variance inflation factor).</p></li>
+<li><p>1.5 Perform exploratory data analysis to find differences in the distributions of the two groups (Happy: <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p></li>
+<li><p>1.6. Check for relationships with correlations (use pairwise correlations and variance inflation factor).</p></li>
 </ul>
 <p>Logistic regression model:</p>
 <ul class="simple">
 <li><p>2.0 Fit a logistic regression model with the following predictor variables (response: <code class="docutils literal notranslate"><span class="pre">Happy</span></code>; predictors: <code class="docutils literal notranslate"><span class="pre">Family</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span></code> and <code class="docutils literal notranslate"><span class="pre">Trust</span></code>) on the pandas training data (df_train).</p></li>
 <li><p>2.1 Please explain wether you would recommend to exclude a predictor variable from your model (from task 2a)). Update your model if necessary.</p></li>
-<li><p>2.2 Use your updated model and predict the probability that a country has “happy” inhabitants (use df_train). Classify this countries with label <code class="docutils literal notranslate"><span class="pre">1</span></code> if the predicted probability exceeds:</p>
+<li><p>2.2 Use your updated model and predict the probability that a country has “happy” inhabitants (use df_train) based on 3 different thresholds. In particular, classify countries with label <code class="docutils literal notranslate"><span class="pre">1</span></code> if the predicted probability exceeds the thresholds stated below (otherwise classify the country as happy (with <code class="docutils literal notranslate"><span class="pre">0</span></code>)) :</p>
 <ul>
 <li><p>0.4 (i.e. threshold = 0.4)</p></li>
 <li><p>0.5 (i.e. threshold = 0.5)</p></li>
 <li><p>0.7 (i.e. threshold = 0.7)</p></li>
 </ul>
 </li>
-</ul>
-<p>Otherwise classify the country as happy (with <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p>
-<ul class="simple">
 <li><p>2.3 Compute the classification report (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sklearn.metrics</span> <span class="pre">import</span> <span class="pre">classification_report</span></code>) in order to determine how many observations were correctly or incorrectly classified. Which threshold would you recommend?</p></li>
 <li><p>2.4 Use the test data to evaluate your model with a threshold of 0.5.</p></li>
 </ul>
@@ -1037,8 +1034,8 @@ memory usage: 7.5+ KB
 </div></div></div>
 </div>
 </div>
-<div class="section" id="distribution">
-<h2>1.4 Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exploratory-data-analysis">
+<h2>1.5 Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Happy&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
@@ -1051,7 +1048,7 @@ memory usage: 7.5+ KB
 </div>
 </div>
 <div class="section" id="correlation">
-<h2>1.5 Correlation<a class="headerlink" href="#correlation" title="Permalink to this headline">¶</a></h2>
+<h2>1.6 Correlation<a class="headerlink" href="#correlation" title="Permalink to this headline">¶</a></h2>
 <p>Inspect pairwise relationship between variables (correlation):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
