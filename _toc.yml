@@ -3,8 +3,8 @@ root: docs/intro.md
 parts:
   - caption: Introduction
     chapters:
-    - file: docs/iris-example.ipynb
     - file: docs/cl-intro.ipynb
+    - file: docs/iris-example.ipynb
     - file: docs/tree.ipynb
   - caption: Algorithms
     chapters:

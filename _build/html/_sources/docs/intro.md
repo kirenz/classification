@@ -2,6 +2,9 @@
 
 In this book we'll cover the basics of classification.
 
+Classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.
+
+
 ---
 
 This online work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
