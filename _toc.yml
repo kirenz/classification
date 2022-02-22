@@ -1,11 +1,13 @@
 format: jb-book
 root: docs/intro.md
 parts:
-  - caption: Data
+  - caption: Introduction
     chapters:
-    - file: docs/data-credit.ipynb
+    - file: docs/cl-intro.ipynb
+    - file: docs/tree.ipynb
   - caption: Algorithms
     chapters:
+    - file: docs/data-credit.ipynb
     - file: docs/logistic.ipynb
     - file: docs/Sgd.ipynb
     - file: docs/gradientboosting.ipynb    
