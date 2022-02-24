@@ -274,6 +274,23 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#performance-metrics">
    Performance metrics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accuracy">
+     Accuracy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#precision-and-recall">
+     Precision and recall
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roc-and-auc">
+     ROC and AUC
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unbalanced-data">
@@ -309,6 +326,23 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#performance-metrics">
    Performance metrics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accuracy">
+     Accuracy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#precision-and-recall">
+     Precision and recall
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roc-and-auc">
+     ROC and AUC
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unbalanced-data">
@@ -326,11 +360,16 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
 <span id="section-cl-intro"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>In supervised learning, we have a dataset consisting of both features and labels. The task is to construct an estimator (model) which is able to predict the label of an object given the set of features.</p>
-<p>Supervised learning is further broken down into two categories: classification and regression. In classification, the label is discrete, while in regression, the label is continuous.</p>
+<p>In supervised learning, we have a dataset consisting of both features (usually multiple <code class="docutils literal notranslate"><span class="pre">X</span></code> variables) and labels (our <code class="docutils literal notranslate"><span class="pre">y</span></code> variable). The task is to construct an estimator (model) which is able to predict the label <code class="docutils literal notranslate"><span class="pre">y</span></code> of an object given the set of features <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+<p>Supervised learning is further broken down into two categories:</p>
+<ul class="simple">
+<li><p>classification</p></li>
+<li><p>regression</p></li>
+</ul>
+<p>In classification, the label is discrete, while in regression, the label is continuous.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.</p>
+<p>Classification refers to a predictive modeling problem where a categorical class label is predicted.</p>
 </div>
 <p>Examples of classification problems include:</p>
 <ul class="simple">
@@ -338,28 +377,51 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Given a handwritten character, classify it as one of the known characters.</p></li>
 <li><p>Given recent user behavior, classify as churn or not.</p></li>
 </ul>
+<p>In the next sections, we’ll cover the primary building blocks of classification models. Therefore, we mainly use content from Google’s excellent Machine Learning Crash Course.</p>
 <div class="section" id="confusion-matrix">
 <h2>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h2>
-<p>Content: Confusion matrix</p>
+<p>We’ll start with the metrics we’ll use to evaluate classification models:</p>
+<br>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSzKkW3nZkCQPXapPzHFsoVdH0_sIsxz1psMgeqPb0Gg-AVolox0R06dFqSfEVj8tIdqm5mIxsg85zG/embed?start=false&loop=false&delayms=3000" frameborder="0" width="820" height="608" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<br>
 <div class="tip admonition">
 <p class="admonition-title">Resources</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://drive.google.com/file/d/136Xm1hiplIkWJFe_t_Wm7R1oUjHPqEVF/view?usp=sharing">Download slides</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/export/pdf">Download slides</a></p></li>
+<li><p>Reading: (Classification: True vs. False and Positive vs. Negative)[<a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative?hl=en">https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative?hl=en</a>]</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="performance-metrics">
 <h2>Performance metrics<a class="headerlink" href="#performance-metrics" title="Permalink to this headline">¶</a></h2>
-<p>Content: Accuracy; recall; precision; F1;</p>
-<div class="tip admonition">
-<p class="admonition-title">Resources</p>
+<div class="section" id="accuracy">
+<h3>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this headline">¶</a></h3>
+<p>Accuracy is one metric for evaluating classification models:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://drive.google.com/file/d/11j4oMjkQjgoarjDXPSUFsUEiAUYY_nGg/view?usp=sharing">Download slides</a></p></li>
+<li><p>Read: <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/accuracy?hl=en">Accuracy</a></p></li>
 </ul>
+</div>
+<div class="section" id="precision-and-recall">
+<h3>Precision and recall<a class="headerlink" href="#precision-and-recall" title="Permalink to this headline">¶</a></h3>
+<p>Learn about precision and recall:</p>
+<ul class="simple">
+<li><p>Read:<a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall?hl=en">Precision and Recall</a></p></li>
+</ul>
+<p>Next, check your understanding by answering <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-accuracy-precision-recall?hl=en">this questions about Accuracy, Precision and Recall)</a></p>
+<p>Read the interactive article <a class="reference external" href="https://research.google.com/bigpicture/attacking-discrimination-in-ml/">Attacking discrimination with smarter machine learning</a> to get a better understanding of the relevance of thresholds in classification problems.</p>
+</div>
+<div class="section" id="roc-and-auc">
+<h3>ROC and AUC<a class="headerlink" href="#roc-and-auc" title="Permalink to this headline">¶</a></h3>
+<p>An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds.</p>
+<ul class="simple">
+<li><p>Read: <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=en">ROC Curve and AUC</a></p></li>
+</ul>
+<p>Check your understanding: <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-roc-and-auc?hl=en">ROC and AUC</a></p>
 </div>
 </div>
 <div class="section" id="unbalanced-data">
 <h2>Unbalanced data<a class="headerlink" href="#unbalanced-data" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we’ll cover a common problem in machine learning tasks: unbalanced data.</p>
 <div class="tip admonition">
 <p class="admonition-title">Resources</p>
 <ul class="simple">
