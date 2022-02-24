@@ -37,7 +37,7 @@ We'll start with the metrics we'll use to evaluate classification models:
 
 - [Download slides](https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/export/pdf)
 
-- Reading: (Classification: True vs. False and Positive vs. Negative)[https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative?hl=en]
+- Reading: [Classification: True vs. False and Positive vs. Negative](https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative?hl=en)
 
 ```
 
