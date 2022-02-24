@@ -4,7 +4,7 @@ parts:
   - caption: Introduction
     chapters:
     - file: docs/cl-intro.ipynb
-    - file: docs/iris.ipynb
+    - file: docs/knn-iris.ipynb
     - file: docs/trees.ipynb
   - caption: Algorithms
     chapters:
