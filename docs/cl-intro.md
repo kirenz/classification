@@ -54,7 +54,7 @@ Accuracy is one metric for evaluating classification models:
 
 Learn about precision and recall:
 
-- Read:[Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall?hl=en)
+- Read: [Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall?hl=en)
 
 Next, check your understanding by answering [this questions about Accuracy, Precision and Recall)](https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-accuracy-precision-recall?hl=en)
 
@@ -69,11 +69,6 @@ An ROC curve (receiver operating characteristic curve) is a graph showing the pe
 Check your understanding: [ROC and AUC](https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-roc-and-auc?hl=en)
 
 
-## Unbalanced data
+### Unbalanced data
 
-Finally, we'll cover a common problem in machine learning tasks: unbalanced data.
-
-```{admonition} Resources
-:class: tip
-- [Download slides](https://drive.google.com/file/d/1LQqDr_ykos1Aw9Ht80pnbSed_8KSmRMO/view?usp=sharing)
-```
+Finally, we'll cover a common problem in machine learning tasks: [unbalanced data](https://drive.google.com/file/d/1LQqDr_ykos1Aw9Ht80pnbSed_8KSmRMO/view?usp=sharing).
