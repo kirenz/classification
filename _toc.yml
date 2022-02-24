@@ -4,8 +4,8 @@ parts:
   - caption: Introduction
     chapters:
     - file: docs/cl-intro.ipynb
-    - file: docs/iris-example.ipynb
-    - file: docs/tree.ipynb
+    - file: docs/iris.ipynb
+    - file: docs/trees.ipynb
   - caption: Algorithms
     chapters:
     - file: docs/data-credit.ipynb
