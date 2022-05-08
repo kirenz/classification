@@ -3,10 +3,15 @@ root: docs/intro.md
 parts:
   - caption: Introduction
     chapters:
-    - file: docs/cl-intro.ipynb
-    - file: docs/knn-iris.ipynb
+    - file: docs/intro-classification.md
+    - file: docs/intro-confusion-matrix.md
+    - file: docs/intro-metrics.md
+    - file: docs/intro-unbalanced.md
+  - caption: Decision trees
+    chapters:
+    - file: docs/trees-intro.md
     - file: docs/trees.ipynb
-  - caption: Algorithms
+  - caption: Models
     chapters:
     - file: docs/data-credit.ipynb
     - file: docs/logistic.ipynb
@@ -19,3 +24,4 @@ parts:
     chapters:
     - file: docs/logistic-whr.ipynb
     - file: docs/logistic-online.ipynb
+    - file: docs/knn-iris.ipynb
