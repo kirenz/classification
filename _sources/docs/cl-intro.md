@@ -1,17 +1,12 @@
 (section-cl-intro)=
 # Introduction
 
-In supervised learning, we have a dataset consisting of both features (usually multiple `X` variables) and labels (our `y` variable). The task is to construct an estimator (model) which is able to predict the label `y` of an object given the set of features `X`. 
+In supervised learning, we have a dataset consisting of both features and labels. The task is to construct an estimator (model) which is able to predict the label of an object given the set of features. 
 
-Supervised learning is further broken down into two categories: 
-
-- classification
-- regression
-
-In classification, the label is discrete, while in regression, the label is continuous.
+Supervised learning is further broken down into two categories: classification and regression. In classification, the label is discrete, while in regression, the label is continuous.
 
 :::{note}
-Classification refers to a predictive modeling problem where a categorical class label is predicted.
+Classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.
 :::
 
 Examples of classification problems include:
@@ -20,55 +15,32 @@ Examples of classification problems include:
 - Given a handwritten character, classify it as one of the known characters.
 - Given recent user behavior, classify as churn or not.
 
-In the next sections, we'll cover the primary building blocks of classification models. Therefore, we mainly use content from Google's excellent Machine Learning Crash Course.
+
 
 ## Confusion matrix
 
-We'll start with the metrics we'll use to evaluate classification models: 
+Content: Confusion matrix
 
-<br>
+```{admonition} Resources
+:class: tip
+- [Download slides](https://drive.google.com/file/d/136Xm1hiplIkWJFe_t_Wm7R1oUjHPqEVF/view?usp=sharing)
+```
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSzKkW3nZkCQPXapPzHFsoVdH0_sIsxz1psMgeqPb0Gg-AVolox0R06dFqSfEVj8tIdqm5mIxsg85zG/embed?start=false&loop=false&delayms=3000" frameborder="0" width="820" height="608" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<br>
+## Performance metrics
+
+Content: Accuracy; recall; precision; F1;
 
 ```{admonition} Resources
 :class: tip
 
-- [Download slides](https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/export/pdf)
-
-- Reading: [Classification: True vs. False and Positive vs. Negative](https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative?hl=en)
-
+- [Download slides](https://drive.google.com/file/d/11j4oMjkQjgoarjDXPSUFsUEiAUYY_nGg/view?usp=sharing)
 ```
 
-## Performance metrics
 
-### Accuracy
+## Unbalanced data
 
-Accuracy is one metric for evaluating classification models:
-
-- Read: [Accuracy](https://developers.google.com/machine-learning/crash-course/classification/accuracy?hl=en)
-
-### Precision and recall
-
-
-Learn about precision and recall:
-
-- Read: [Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall?hl=en)
-
-Next, check your understanding by answering [this questions about Accuracy, Precision and Recall)](https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-accuracy-precision-recall?hl=en)
-
-Read the interactive article [Attacking discrimination with smarter machine learning](https://research.google.com/bigpicture/attacking-discrimination-in-ml/) to get a better understanding of the relevance of thresholds in classification problems.
-
-### ROC and AUC
-
-An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds.
-
-- Read: [ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=en)
-
-Check your understanding: [ROC and AUC](https://developers.google.com/machine-learning/crash-course/classification/check-your-understanding-roc-and-auc?hl=en)
-
-
-### Unbalanced data
-
-Finally, we'll cover a common problem in machine learning tasks: [unbalanced data](https://drive.google.com/file/d/1LQqDr_ykos1Aw9Ht80pnbSed_8KSmRMO/view?usp=sharing).
+```{admonition} Resources
+:class: tip
+- [Download slides](https://drive.google.com/file/d/1LQqDr_ykos1Aw9Ht80pnbSed_8KSmRMO/view?usp=sharing)
+```
