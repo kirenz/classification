@@ -25,3 +25,6 @@ parts:
     - file: docs/logistic-whr.ipynb
     - file: docs/logistic-online.ipynb
     - file: docs/knn-iris.ipynb
+  - caption: References
+    chapters:
+    - file: docs/reference.md
