@@ -418,10 +418,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We use a classification model to predict which customers will default on their credit card debt.</p>
 <div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-<p>To learn more about the data and all of the data preparation steps, take a look at <a class="reference internal" href="data-credit.html"><span class="doc std std-doc">this page</span></a>. Here, we simply import a Python script which includes all of the necessary steps.</p>
+<p>To learn more about the data and all of the data preparation steps, take a look at <a class="reference internal" href="data-credit.html"><span class="doc std std-doc">this page</span></a>. Here, we simply import the prepared data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">data_prep_credit</span> <span class="kn">import</span> <span class="o">*</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/classification/main/_static/data/default-prepared.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
