@@ -1080,14 +1080,8 @@ Name: Purchased, dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span>
-                              <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1134,9 +1128,7 @@ weighted avg       0.79      0.78      0.78       120
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">RocCurveDisplay</span>
 
-<span class="n">RocCurveDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> 
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">RocCurveDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -1181,20 +1173,15 @@ weighted avg       0.79      0.78      0.78       120
 <h3>Threshold  0.4<a class="headerlink" href="#threshold-0-4" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_04</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.4</span><span class="p">})</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_04</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_04</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.4</span><span class="p">})</span>
 
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span>
-                              <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_predictions</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_04</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]);</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_04</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_40_0.png" src="../_images/logistic-online_40_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
            0       0.84      0.79      0.81        72
@@ -1205,6 +1192,7 @@ weighted avg       0.79      0.78      0.78       120
 weighted avg       0.79      0.78      0.78       120
 </pre></div>
 </div>
+<img alt="../_images/logistic-online_40_1.png" src="../_images/logistic-online_40_1.png" />
 </div>
 </div>
 </div>
@@ -1212,13 +1200,9 @@ weighted avg       0.79      0.78      0.78       120
 <h3>Threshold 0.5<a class="headerlink" href="#threshold-0-5" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_05</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.5</span><span class="p">})</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_05</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_05</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.5</span><span class="p">})</span>
 
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span>
-                              <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_predictions</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_05</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]);</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_05</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]))</span>
 </pre></div>
@@ -1243,20 +1227,15 @@ weighted avg       0.79      0.78      0.78       120
 <h3>Threshold 0.7<a class="headerlink" href="#threshold-0-7" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_07</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.7</span><span class="p">})</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_07</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_07</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.7</span><span class="p">})</span>
 
-<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span>
-                              <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
-<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_predictions</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_07</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]);</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_07</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_44_0.png" src="../_images/logistic-online_44_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
            0       0.66      0.96      0.78        72
@@ -1267,6 +1246,7 @@ weighted avg       0.79      0.78      0.78       120
 weighted avg       0.71      0.68      0.62       120
 </pre></div>
 </div>
+<img alt="../_images/logistic-online_44_1.png" src="../_images/logistic-online_44_1.png" />
 </div>
 </div>
 </div>
