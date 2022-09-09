@@ -439,19 +439,80 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-preparation">
-   Data preparation
+  <a class="reference internal nav-link" href="#setup">
+   Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
-   Exploratory data analysis (EDA)
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-data">
+     Import data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structure">
+     Data structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-corrections">
+     Data corrections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-lists">
+     Variable lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-split">
+     Data split
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-exploration-set">
+     Data exploration set
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-data">
+   Analyze data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-features">
+     Select features
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model">
    Model
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-model">
+     Select model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#training">
+     Training
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coefficients">
+     Coefficients
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classification-metrics">
@@ -512,19 +573,80 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-preparation">
-   Data preparation
+  <a class="reference internal nav-link" href="#setup">
+   Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
-   Exploratory data analysis (EDA)
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-data">
+     Import data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structure">
+     Data structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-corrections">
+     Data corrections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-lists">
+     Variable lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-split">
+     Data split
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-exploration-set">
+     Data exploration set
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-data">
+   Analyze data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-features">
+     Select features
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model">
    Model
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-model">
+     Select model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#training">
+     Training
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coefficients">
+     Coefficients
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classification-metrics">
@@ -578,14 +700,39 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="online-ads">
 <h1>Online ads<a class="headerlink" href="#online-ads" title="Permalink to this headline">#</a></h1>
 <p>In this problem set we analyse the relationship between online ads and purchase behavior. In particular, we want to classify which online users are likely to purchase a certain product after being exposed to an online ad.</p>
-<section id="data-preparation">
-<h2>Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">#</a></h2>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/purchase.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegressionCV</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
+<section id="import-data">
+<h3>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/purchase.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-structure">
+<h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -747,16 +894,6 @@ memory usage: 18.9+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make dummy variable</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">drop_first</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="c1"># drop irrelevant columns</span>
-<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="s1">&#39;User ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inspect outcome variable</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
@@ -770,32 +907,58 @@ Name: Purchased, dtype: int64
 </div>
 </div>
 </div>
+</section>
+<section id="data-corrections">
+<h3>Data corrections<a class="headerlink" href="#data-corrections" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepara data for scikit learn </span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">])</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Purchased</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change data format</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+
+<span class="c1"># make dummy variable</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;male&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">drop_first</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># drop irrelevant columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="s1">&#39;User ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="variable-lists">
+<h3>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepare data for scikit learn </span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s1">&#39;Purchased&#39;</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">y_label</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-split">
+<h3>Data split<a class="headerlink" href="#data-split" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make data split</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="data-exploration-set">
+<h3>Data exploration set<a class="headerlink" href="#data-exploration-set" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create new training dataset for data exploration</span>
-<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">train_dataset</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 
-<span class="n">train_dataset</span>
+<span class="n">df_train</span>
 </pre></div>
 </div>
 </div>
@@ -908,11 +1071,12 @@ Name: Purchased, dtype: int64
 </div></div></div>
 </div>
 </section>
-<section id="exploratory-data-analysis-eda">
-<h2>Exploratory data analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="analyze-data">
+<h2>Analyze data<a class="headerlink" href="#analyze-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_dataset</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Purchased&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -1072,14 +1236,86 @@ Name: Purchased, dtype: int64
 <p>Visualization of differences:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Purchased&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;row&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Purchased:N&#39;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">row</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;EstimatedSalary&#39;</span><span class="p">,</span> <span class="s1">&#39;male&#39;</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;EstimatedSalary&#39;</span><span class="p">,</span> <span class="s1">&#39;male&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_12_0.png" src="../_images/logistic-online_12_0.png" />
+<div class="output text_html">
+<div id="altair-viz-280dee90f3714f71b786cf889e84ed09"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-280dee90f3714f71b786cf889e84ed09") {
+      outputDiv = document.getElementById("altair-viz-280dee90f3714f71b786cf889e84ed09");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "repeat": {"column": ["Age", "EstimatedSalary", "male"], "row": ["Age", "EstimatedSalary", "male"]}, "spec": {"data": {"name": "data-c8e5ce5ac5fe444e8ce0603795e89468"}, "mark": "circle", "encoding": {"color": {"field": "Purchased", "type": "nominal"}, "x": {"field": {"repeat": "column"}, "type": "quantitative"}, "y": {"field": {"repeat": "row"}, "type": "quantitative"}}, "height": 150, "selection": {"selector009": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "width": 150}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-c8e5ce5ac5fe444e8ce0603795e89468": [{"Age": 27, "EstimatedSalary": 31000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 91000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 46000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 71000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 81000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 31000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 51000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 74000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 82000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 33000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 53000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 65000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 66000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 25000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 104000, "male": 1, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 32000, "male": 1, "Purchased": 0}, {"Age": 52, "EstimatedSalary": 150000, "male": 1, "Purchased": 1}, {"Age": 53, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 25, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 142000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 38000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 122000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 87000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 108000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 100000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 147000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 26000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 105000, "male": 1, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 45000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 51000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 93000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 30000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 90000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 63000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 47000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 30000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 106000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 76000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 97000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 23000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 62000, "male": 0, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 33000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 37000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 107000, "male": 0, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 16000, "male": 0, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 135000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 119000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 27000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 32, "EstimatedSalary": 120000, "male": 1, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 17000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 64000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 33000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 30000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 130000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 148000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 143000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 49000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 69000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 33000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 41000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 32000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 42000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 50000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 51000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 42000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 78000, "male": 1, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 48000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 75000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 39000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 123000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 74000, "male": 1, "Purchased": 1}, {"Age": 21, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 72000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 58000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 149000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 58000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 70000, "male": 1, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 85000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 76000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 96000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 149000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 134000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 22000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 112000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 39000, "male": 1, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 32000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 43000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 125000, "male": 0, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 131000, "male": 0, "Purchased": 1}, {"Age": 33, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 45000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 84000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 18000, "male": 1, "Purchased": 0}, {"Age": 56, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 39000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 85000, "male": 0, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 143000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 60000, "male": 1, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 54, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 21000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 126000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 20000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 43, "EstimatedSalary": 112000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 125000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 15000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 88000, "male": 0, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 34000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 130000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 90000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 22000, "male": 0, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 141000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 41000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 60000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 150000, "male": 0, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 22, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 32000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 23000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 42000, "male": 1, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 20, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 49000, "male": 1, "Purchased": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Code for seaborn:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Purchased&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/logistic-online_24_0.png" src="../_images/logistic-online_24_0.png" />
 </div>
 </div>
 <p>Inspect (linear) relationships between variables with correlation (pearson’s correlation coefficient)</p>
@@ -1110,7 +1346,6 @@ Name: Purchased, dtype: int64
       <th></th>
       <th>Age</th>
       <th>EstimatedSalary</th>
-      <th>Purchased</th>
       <th>male</th>
     </tr>
   </thead>
@@ -1119,28 +1354,18 @@ Name: Purchased, dtype: int64
       <th>Age</th>
       <td>1.00</td>
       <td>0.16</td>
-      <td>0.62</td>
       <td>-0.07</td>
     </tr>
     <tr>
       <th>EstimatedSalary</th>
       <td>0.16</td>
       <td>1.00</td>
-      <td>0.36</td>
       <td>-0.06</td>
-    </tr>
-    <tr>
-      <th>Purchased</th>
-      <td>0.62</td>
-      <td>0.36</td>
-      <td>1.00</td>
-      <td>-0.04</td>
     </tr>
     <tr>
       <th>male</th>
       <td>-0.07</td>
       <td>-0.06</td>
-      <td>-0.04</td>
       <td>1.00</td>
     </tr>
   </tbody>
@@ -1149,56 +1374,338 @@ Name: Purchased, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_area</span><span class="p">(</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">interpolate</span><span class="o">=</span><span class="s1">&#39;step&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Age:Q&quot;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Bin</span><span class="p">(</span><span class="n">maxbins</span><span class="o">=</span><span class="mi">20</span><span class="p">)),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Purchased:N&#39;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_15_0.png" src="../_images/logistic-online_15_0.png" />
+<div class="output text_html">
+<div id="altair-viz-a39da88461b849db89cba6c365717554"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-a39da88461b849db89cba6c365717554") {
+      outputDiv = document.getElementById("altair-viz-a39da88461b849db89cba6c365717554");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-c8e5ce5ac5fe444e8ce0603795e89468"}, "mark": {"type": "area", "interpolate": "step", "opacity": 0.5}, "encoding": {"color": {"field": "Purchased", "type": "nominal"}, "x": {"bin": {"maxbins": 20}, "field": "Age", "type": "quantitative"}, "y": {"aggregate": "count", "stack": null, "type": "quantitative"}}, "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-c8e5ce5ac5fe444e8ce0603795e89468": [{"Age": 27, "EstimatedSalary": 31000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 91000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 46000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 71000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 81000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 31000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 51000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 74000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 82000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 33000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 53000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 65000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 66000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 25000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 104000, "male": 1, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 32000, "male": 1, "Purchased": 0}, {"Age": 52, "EstimatedSalary": 150000, "male": 1, "Purchased": 1}, {"Age": 53, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 25, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 142000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 38000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 122000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 87000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 108000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 100000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 147000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 26000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 105000, "male": 1, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 45000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 51000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 93000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 30000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 90000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 63000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 47000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 30000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 106000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 76000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 97000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 23000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 62000, "male": 0, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 33000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 37000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 107000, "male": 0, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 16000, "male": 0, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 135000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 119000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 27000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 32, "EstimatedSalary": 120000, "male": 1, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 17000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 64000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 33000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 30000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 130000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 148000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 143000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 49000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 69000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 33000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 41000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 32000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 42000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 50000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 51000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 42000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 78000, "male": 1, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 48000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 75000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 39000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 123000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 74000, "male": 1, "Purchased": 1}, {"Age": 21, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 72000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 58000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 149000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 58000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 70000, "male": 1, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 85000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 76000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 96000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 149000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 134000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 22000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 112000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 39000, "male": 1, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 32000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 43000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 125000, "male": 0, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 131000, "male": 0, "Purchased": 1}, {"Age": 33, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 45000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 84000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 18000, "male": 1, "Purchased": 0}, {"Age": 56, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 39000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 85000, "male": 0, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 143000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 60000, "male": 1, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 54, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 21000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 126000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 20000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 43, "EstimatedSalary": 112000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 125000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 15000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 88000, "male": 0, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 34000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 130000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 90000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 22000, "male": 0, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 141000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 41000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 60000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 150000, "male": 0, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 22, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 32000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 23000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 42000, "male": 1, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 20, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 49000, "male": 1, "Purchased": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Code for seaborn:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/logistic-online_29_0.png" src="../_images/logistic-online_29_0.png" />
 </div>
 </div>
 <p>Purchasers seem to be _________ than non-purchaser.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_boxplot</span><span class="p">(</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;male:N&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Age:Q&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)),</span>  
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Purchased:N&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_17_0.png" src="../_images/logistic-online_17_0.png" />
+<div class="output text_html">
+<div id="altair-viz-a6322431c379489cb62e00fd986530f1"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-a6322431c379489cb62e00fd986530f1") {
+      outputDiv = document.getElementById("altair-viz-a6322431c379489cb62e00fd986530f1");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-c8e5ce5ac5fe444e8ce0603795e89468"}, "mark": {"type": "boxplot", "opacity": 0.7, "size": 50}, "encoding": {"color": {"field": "Purchased", "type": "nominal"}, "x": {"field": "male", "type": "nominal"}, "y": {"field": "Age", "scale": {"zero": true}, "type": "quantitative"}}, "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-c8e5ce5ac5fe444e8ce0603795e89468": [{"Age": 27, "EstimatedSalary": 31000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 91000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 46000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 71000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 81000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 31000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 51000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 74000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 82000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 33000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 53000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 65000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 66000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 25000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 104000, "male": 1, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 32000, "male": 1, "Purchased": 0}, {"Age": 52, "EstimatedSalary": 150000, "male": 1, "Purchased": 1}, {"Age": 53, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 25, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 142000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 38000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 122000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 87000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 108000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 100000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 147000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 26000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 105000, "male": 1, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 45000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 51000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 93000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 30000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 90000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 63000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 47000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 30000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 106000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 76000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 97000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 23000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 62000, "male": 0, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 33000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 37000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 107000, "male": 0, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 16000, "male": 0, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 135000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 119000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 27000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 32, "EstimatedSalary": 120000, "male": 1, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 17000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 64000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 33000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 30000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 130000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 148000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 143000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 49000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 69000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 33000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 41000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 32000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 42000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 50000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 51000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 42000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 78000, "male": 1, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 48000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 75000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 39000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 123000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 74000, "male": 1, "Purchased": 1}, {"Age": 21, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 72000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 58000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 149000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 58000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 70000, "male": 1, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 85000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 76000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 96000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 149000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 134000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 22000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 112000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 39000, "male": 1, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 32000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 43000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 125000, "male": 0, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 131000, "male": 0, "Purchased": 1}, {"Age": 33, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 45000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 84000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 18000, "male": 1, "Purchased": 0}, {"Age": 56, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 39000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 85000, "male": 0, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 143000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 60000, "male": 1, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 54, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 21000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 126000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 20000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 43, "EstimatedSalary": 112000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 125000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 15000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 88000, "male": 0, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 34000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 130000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 90000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 22000, "male": 0, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 141000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 41000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 60000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 150000, "male": 0, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 22, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 32000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 23000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 42000, "male": 1, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 20, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 49000, "male": 1, "Purchased": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Code for seaborn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/logistic-online_33_0.png" src="../_images/logistic-online_33_0.png" />
 </div>
 </div>
 <p>There are __________ differences regarding gender.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;EstimatedSalary&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">);</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_area</span><span class="p">(</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">interpolate</span><span class="o">=</span><span class="s1">&#39;step&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;EstimatedSalary:Q&quot;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Bin</span><span class="p">(</span><span class="n">maxbins</span><span class="o">=</span><span class="mi">20</span><span class="p">)),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Purchased:N&#39;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_19_0.png" src="../_images/logistic-online_19_0.png" />
+<div class="output text_html">
+<div id="altair-viz-7a5ef1d2b1a14a09980dfd21bab7488d"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7a5ef1d2b1a14a09980dfd21bab7488d") {
+      outputDiv = document.getElementById("altair-viz-7a5ef1d2b1a14a09980dfd21bab7488d");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-c8e5ce5ac5fe444e8ce0603795e89468"}, "mark": {"type": "area", "interpolate": "step", "opacity": 0.5}, "encoding": {"color": {"field": "Purchased", "type": "nominal"}, "x": {"bin": {"maxbins": 20}, "field": "EstimatedSalary", "type": "quantitative"}, "y": {"aggregate": "count", "stack": null, "type": "quantitative"}}, "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-c8e5ce5ac5fe444e8ce0603795e89468": [{"Age": 27, "EstimatedSalary": 31000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 91000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 46000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 71000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 81000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 31000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 51000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 74000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 82000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 33000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 53000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 65000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 66000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 25000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 104000, "male": 1, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 32000, "male": 1, "Purchased": 0}, {"Age": 52, "EstimatedSalary": 150000, "male": 1, "Purchased": 1}, {"Age": 53, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 25, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 142000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 38000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 122000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 87000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 108000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 100000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 147000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 26000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 105000, "male": 1, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 45000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 51000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 93000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 30000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 90000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 63000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 47000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 30000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 106000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 76000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 97000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 23000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 62000, "male": 0, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 33000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 37000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 107000, "male": 0, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 16000, "male": 0, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 135000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 119000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 27000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 32, "EstimatedSalary": 120000, "male": 1, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 17000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 64000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 33000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 30000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 130000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 148000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 143000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 49000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 69000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 33000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 41000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 32000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 42000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 50000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 51000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 42000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 78000, "male": 1, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 48000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 75000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 39000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 123000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 74000, "male": 1, "Purchased": 1}, {"Age": 21, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 72000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 58000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 149000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 58000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 70000, "male": 1, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 85000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 76000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 96000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 149000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 134000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 22000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 112000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 39000, "male": 1, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 32000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 43000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 125000, "male": 0, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 131000, "male": 0, "Purchased": 1}, {"Age": 33, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 45000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 84000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 18000, "male": 1, "Purchased": 0}, {"Age": 56, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 39000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 85000, "male": 0, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 143000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 60000, "male": 1, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 54, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 21000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 126000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 20000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 43, "EstimatedSalary": 112000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 125000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 15000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 88000, "male": 0, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 34000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 130000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 90000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 22000, "male": 0, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 141000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 41000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 60000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 150000, "male": 0, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 22, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 32000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 23000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 42000, "male": 1, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 20, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 49000, "male": 1, "Purchased": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Code for seaborn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;EstimatedSalary&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/logistic-online_37_0.png" src="../_images/logistic-online_37_0.png" />
 </div>
 </div>
 <p>Purchaser earn a ______________ estimated salary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;EstimatedSalary&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_boxplot</span><span class="p">(</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;male:N&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;EstimatedSalary:Q&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)),</span>  
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Purchased:N&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_21_0.png" src="../_images/logistic-online_21_0.png" />
+<div class="output text_html">
+<div id="altair-viz-cade14745cf147819db4516cafad37bf"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-cade14745cf147819db4516cafad37bf") {
+      outputDiv = document.getElementById("altair-viz-cade14745cf147819db4516cafad37bf");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-c8e5ce5ac5fe444e8ce0603795e89468"}, "mark": {"type": "boxplot", "opacity": 0.7, "size": 50}, "encoding": {"color": {"field": "Purchased", "type": "nominal"}, "x": {"field": "male", "type": "nominal"}, "y": {"field": "EstimatedSalary", "scale": {"zero": true}, "type": "quantitative"}}, "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-c8e5ce5ac5fe444e8ce0603795e89468": [{"Age": 27, "EstimatedSalary": 31000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 91000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 46000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 71000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 81000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 31000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 51000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 74000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 82000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 33000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 53000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 18, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 65000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 66000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 25000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 104000, "male": 1, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 32000, "male": 1, "Purchased": 0}, {"Age": 52, "EstimatedSalary": 150000, "male": 1, "Purchased": 1}, {"Age": 53, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 25, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 142000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 38000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 122000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 87000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 108000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 100000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 147000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 26000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 105000, "male": 1, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 45000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 51000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 93000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 30000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 90000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 63000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 47000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 30000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 106000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 76000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 97000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 86000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 23000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 62000, "male": 0, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 33000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 29000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 37000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 77000, "male": 1, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 107000, "male": 0, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 138000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 16000, "male": 0, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 135000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 119000, "male": 0, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 27000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 32, "EstimatedSalary": 120000, "male": 1, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 17000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 19000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 64000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 33000, "male": 1, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 30000, "male": 0, "Purchased": 1}, {"Age": 23, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 130000, "male": 0, "Purchased": 1}, {"Age": 29, "EstimatedSalary": 148000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 25, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 143000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 27, "EstimatedSalary": 17000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 49000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 69000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 22000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 33000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 107000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 41000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 60000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 32000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 42000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 50000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 51000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 42000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 78000, "male": 1, "Purchased": 0}, {"Age": 23, "EstimatedSalary": 48000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 75000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 39000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 123000, "male": 1, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 74000, "male": 1, "Purchased": 1}, {"Age": 21, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 72000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 58000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 47000, "male": 0, "Purchased": 0}, {"Age": 28, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 117000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 75000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 149000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 58000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 1, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 70000, "male": 1, "Purchased": 0}, {"Age": 19, "EstimatedSalary": 85000, "male": 1, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 76000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 96000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 149000, "male": 1, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 134000, "male": 0, "Purchased": 0}, {"Age": 33, "EstimatedSalary": 28000, "male": 0, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 54000, "male": 1, "Purchased": 0}, {"Age": 45, "EstimatedSalary": 22000, "male": 1, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 112000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 39000, "male": 1, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 39, "EstimatedSalary": 59000, "male": 0, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 32000, "male": 0, "Purchased": 1}, {"Age": 26, "EstimatedSalary": 43000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 55, "EstimatedSalary": 125000, "male": 0, "Purchased": 1}, {"Age": 37, "EstimatedSalary": 146000, "male": 0, "Purchased": 1}, {"Age": 45, "EstimatedSalary": 131000, "male": 0, "Purchased": 1}, {"Age": 33, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 45000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 137000, "male": 0, "Purchased": 1}, {"Age": 24, "EstimatedSalary": 84000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 18000, "male": 1, "Purchased": 0}, {"Age": 56, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 39000, "male": 0, "Purchased": 1}, {"Age": 28, "EstimatedSalary": 85000, "male": 0, "Purchased": 0}, {"Age": 53, "EstimatedSalary": 143000, "male": 0, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 89000, "male": 1, "Purchased": 0}, {"Age": 57, "EstimatedSalary": 60000, "male": 1, "Purchased": 1}, {"Age": 40, "EstimatedSalary": 75000, "male": 1, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 79000, "male": 1, "Purchased": 0}, {"Age": 20, "EstimatedSalary": 82000, "male": 0, "Purchased": 0}, {"Age": 22, "EstimatedSalary": 55000, "male": 0, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 88000, "male": 1, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 15000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 36000, "male": 0, "Purchased": 1}, {"Age": 42, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 43000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 54, "EstimatedSalary": 26000, "male": 0, "Purchased": 1}, {"Age": 19, "EstimatedSalary": 21000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 50000, "male": 0, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 70000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 126000, "male": 0, "Purchased": 1}, {"Age": 47, "EstimatedSalary": 20000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 79000, "male": 0, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 83000, "male": 0, "Purchased": 0}, {"Age": 29, "EstimatedSalary": 80000, "male": 1, "Purchased": 0}, {"Age": 43, "EstimatedSalary": 112000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 58, "EstimatedSalary": 144000, "male": 1, "Purchased": 1}, {"Age": 36, "EstimatedSalary": 125000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 28000, "male": 1, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 52000, "male": 1, "Purchased": 0}, {"Age": 30, "EstimatedSalary": 15000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 88000, "male": 0, "Purchased": 1}, {"Age": 27, "EstimatedSalary": 57000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 31, "EstimatedSalary": 89000, "male": 0, "Purchased": 0}, {"Age": 47, "EstimatedSalary": 34000, "male": 1, "Purchased": 1}, {"Age": 31, "EstimatedSalary": 74000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 72000, "male": 1, "Purchased": 0}, {"Age": 40, "EstimatedSalary": 57000, "male": 1, "Purchased": 0}, {"Age": 59, "EstimatedSalary": 130000, "male": 1, "Purchased": 1}, {"Age": 49, "EstimatedSalary": 65000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 90000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 22000, "male": 0, "Purchased": 0}, {"Age": 54, "EstimatedSalary": 104000, "male": 0, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 20000, "male": 1, "Purchased": 0}, {"Age": 49, "EstimatedSalary": 141000, "male": 0, "Purchased": 1}, {"Age": 48, "EstimatedSalary": 41000, "male": 1, "Purchased": 1}, {"Age": 35, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 60000, "male": 1, "Purchased": 0}, {"Age": 32, "EstimatedSalary": 150000, "male": 0, "Purchased": 1}, {"Age": 18, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 55000, "male": 1, "Purchased": 0}, {"Age": 42, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 38, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 108000, "male": 0, "Purchased": 1}, {"Age": 22, "EstimatedSalary": 63000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 32000, "male": 0, "Purchased": 0}, {"Age": 46, "EstimatedSalary": 59000, "male": 1, "Purchased": 0}, {"Age": 48, "EstimatedSalary": 134000, "male": 0, "Purchased": 1}, {"Age": 41, "EstimatedSalary": 72000, "male": 0, "Purchased": 0}, {"Age": 50, "EstimatedSalary": 44000, "male": 0, "Purchased": 0}, {"Age": 38, "EstimatedSalary": 71000, "male": 1, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 23000, "male": 1, "Purchased": 0}, {"Age": 35, "EstimatedSalary": 61000, "male": 1, "Purchased": 0}, {"Age": 37, "EstimatedSalary": 80000, "male": 0, "Purchased": 0}, {"Age": 24, "EstimatedSalary": 27000, "male": 0, "Purchased": 0}, {"Age": 26, "EstimatedSalary": 84000, "male": 0, "Purchased": 0}, {"Age": 34, "EstimatedSalary": 25000, "male": 0, "Purchased": 0}, {"Age": 36, "EstimatedSalary": 54000, "male": 0, "Purchased": 0}, {"Age": 21, "EstimatedSalary": 68000, "male": 0, "Purchased": 0}, {"Age": 41, "EstimatedSalary": 71000, "male": 0, "Purchased": 0}, {"Age": 60, "EstimatedSalary": 42000, "male": 1, "Purchased": 1}, {"Age": 52, "EstimatedSalary": 90000, "male": 0, "Purchased": 1}, {"Age": 20, "EstimatedSalary": 23000, "male": 0, "Purchased": 0}, {"Age": 51, "EstimatedSalary": 23000, "male": 1, "Purchased": 1}, {"Age": 46, "EstimatedSalary": 79000, "male": 1, "Purchased": 1}, {"Age": 30, "EstimatedSalary": 49000, "male": 1, "Purchased": 0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Code for seaborn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;EstimatedSalary&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Purchased&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/logistic-online_41_0.png" src="../_images/logistic-online_41_0.png" />
 </div>
 </div>
 <p>Insight: there are ___________ differences between males and females (regarding purchase behavior, age and estimated salary)</p>
-</section>
-<section id="model">
-<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">#</a></h2>
-<p>Next, we will fit a logistic regression model with a <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/l2-regularization">L2 regularization (ridge regression)</a>. In particular, we use an estimator that has built-in cross-validation capabilities to automatically select the best hyper-parameter for our L2 regularization (see the <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV">documentation</a>).</p>
-<p>We only use our most promising predictor variables <code class="docutils literal notranslate"><span class="pre">Age</span></code> and <code class="docutils literal notranslate"><span class="pre">EstimatedSalary</span></code> for our model.</p>
+<section id="select-features">
+<h3>Select features<a class="headerlink" href="#select-features" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># only use meaningful predictors</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># only select meaningful predictors</span>
+
 <span class="n">features_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;EstimatedSalary&#39;</span><span class="p">]</span>
 
 <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">features_model</span><span class="p">]</span> 
@@ -1207,22 +1714,63 @@ Name: Purchased, dtype: int64
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="model">
+<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">#</a></h2>
+<section id="select-model">
+<h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
+<p>Next, we will fit a logistic regression model with a <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/l2-regularization">L2 regularization (ridge regression)</a>. In particular, we use an estimator that has built-in cross-validation capabilities to automatically select the best hyper-parameter for our L2 regularization (see the <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV">documentation</a>).</p>
+<p>We only use our most promising predictor variables <code class="docutils literal notranslate"><span class="pre">Age</span></code> and <code class="docutils literal notranslate"><span class="pre">EstimatedSalary</span></code> for our model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegressionCV</span>
-
-<span class="c1"># model</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegressionCV</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">)</span>
-
-<span class="c1"># fit model to data</span>
-<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="c1"># prediction</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># model</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegressionCV</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="training">
+<h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fit model to data</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegressionCV()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">LogisticRegressionCV</label><div class="sk-toggleable__content"><pre>LogisticRegressionCV()</pre></div></div></div></div></div></div></div>
+</div>
+</section>
+<section id="coefficients">
+<h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-4.64629128])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[7.57358038e-02, 1.72880947e-05]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="classification-metrics">
 <h2>Classification metrics<a class="headerlink" href="#classification-metrics" title="Permalink to this headline">#</a></h2>
@@ -1248,12 +1796,14 @@ Name: Purchased, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_28_0.png" src="../_images/logistic-online_28_0.png" />
+<img alt="../_images/logistic-online_55_0.png" src="../_images/logistic-online_55_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">]))</span>
 </pre></div>
@@ -1272,18 +1822,8 @@ weighted avg       0.79      0.78      0.78       120
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">macro</span></code>: Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.</p>
-<p><code class="docutils literal notranslate"><span class="pre">weighted</span></code>: Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance.</p>
-<p>Note that recall is also sometimes called sensitivity or true positive rate.</p>
-<ul class="simple">
-<li><p>High scores for both <em>precision</em> and <em>recall</em> show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).</p></li>
-<li><p>The importance of precision vs recall depends on the use case at hand (and the costs associated with missclassification).</p></li>
-<li><p>A system with <em>high recall</em> but <em>low precision</em> returns many results, but most of its predicted labels are incorrect when compared to the training labels.</p></li>
-<li><p>A system with <em>high precision</em> but <em>low recall</em> is just the opposite, returning very few results, but most of its predicted labels are correct when compared to the training labels.</p></li>
-<li><p>An ideal system with high precision and high recall will return many results, with most results labeled correctly.</p></li>
-</ul>
-<p>The unweighted recall of our model is _____</p>
-<p>The unweighted precision of our model is _____</p>
+<p>The (unweighted) recall of our model is _____</p>
+<p>The (unweighted) precision of our model is _____</p>
 <section id="roc-curve">
 <h3>ROC Curve<a class="headerlink" href="#roc-curve" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
@@ -1295,7 +1835,7 @@ weighted avg       0.79      0.78      0.78       120
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/logistic-online_34_0.png" src="../_images/logistic-online_34_0.png" />
+<img alt="../_images/logistic-online_59_0.png" src="../_images/logistic-online_59_0.png" />
 </div>
 </div>
 </section>
@@ -1321,9 +1861,13 @@ weighted avg       0.79      0.78      0.78       120
 <section id="thresholds">
 <h2>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this headline">#</a></h2>
 <p>Logistic regression returns a probability. You can use the returned probability “as is” (for example, the probability that the user will buy the product is 0.8) or convert the returned probability to a binary value (for example, this user will buy the product, therefore we label him as “Yes”).</p>
-<p>A logistic regression model that returns 0.9 for a particular customer is predicting that it is very likely that the customer will buy the product. In order to map a logistic regression value to a binary category (e.g., “Yes” or “No”), you must define a <strong>classification threshold</strong> (also called the decision threshold). A value above that threshold indicates “Yes”, the customer will buy the product; a value below indicates “No”, the customer will not buy the product.</p>
+<p>A logistic regression model that returns 0.9 for a particular customer is predicting that it is very likely that the customer will buy the product. In order to map a logistic regression value to a binary category (e.g., “Yes” or “No”), you must define a <strong>classification threshold</strong> (also called the decision threshold).</p>
+<ul class="simple">
+<li><p>A value above that threshold indicates “Yes”, the customer will buy the product</p></li>
+<li><p>A value below indicates “No”, the customer will not buy the product</p></li>
+</ul>
 <p>Notice that the optimal classification threshold is problem-dependent and therefore a value that you must tune (see <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/thresholding">Google developers</a>).</p>
-<p>We use three different thresholds. Which threshold would you recommend?</p>
+<p>We use three different thresholds. Which threshold would you recommend if we want to maximize our F1-Score?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_proba</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -1354,7 +1898,7 @@ weighted avg       0.79      0.78      0.78       120
 weighted avg       0.79      0.78      0.78       120
 </pre></div>
 </div>
-<img alt="../_images/logistic-online_40_1.png" src="../_images/logistic-online_40_1.png" />
+<img alt="../_images/logistic-online_65_1.png" src="../_images/logistic-online_65_1.png" />
 </div>
 </div>
 </section>
@@ -1381,7 +1925,7 @@ weighted avg       0.79      0.78      0.78       120
 weighted avg       0.79      0.78      0.78       120
 </pre></div>
 </div>
-<img alt="../_images/logistic-online_42_1.png" src="../_images/logistic-online_42_1.png" />
+<img alt="../_images/logistic-online_67_1.png" src="../_images/logistic-online_67_1.png" />
 </div>
 </div>
 </section>
@@ -1408,7 +1952,7 @@ weighted avg       0.79      0.78      0.78       120
 weighted avg       0.71      0.68      0.62       120
 </pre></div>
 </div>
-<img alt="../_images/logistic-online_44_1.png" src="../_images/logistic-online_44_1.png" />
+<img alt="../_images/logistic-online_69_1.png" src="../_images/logistic-online_69_1.png" />
 </div>
 </div>
 </section>
