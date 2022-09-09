@@ -1860,13 +1860,6 @@ weighted avg       0.79      0.78      0.78       120
 </section>
 <section id="thresholds">
 <h2>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this headline">#</a></h2>
-<p>Logistic regression returns a probability. You can use the returned probability “as is” (for example, the probability that the user will buy the product is 0.8) or convert the returned probability to a binary value (for example, this user will buy the product, therefore we label him as “Yes”).</p>
-<p>A logistic regression model that returns 0.9 for a particular customer is predicting that it is very likely that the customer will buy the product. In order to map a logistic regression value to a binary category (e.g., “Yes” or “No”), you must define a <strong>classification threshold</strong> (also called the decision threshold).</p>
-<ul class="simple">
-<li><p>A value above that threshold indicates “Yes”, the customer will buy the product</p></li>
-<li><p>A value below indicates “No”, the customer will not buy the product</p></li>
-</ul>
-<p>Notice that the optimal classification threshold is problem-dependent and therefore a value that you must tune (see <a class="reference external" href="https://developers.google.com/machine-learning/crash-course/classification/thresholding">Google developers</a>).</p>
 <p>We use three different thresholds. Which threshold would you recommend if we want to maximize our F1-Score?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
